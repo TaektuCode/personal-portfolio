@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+// COLOR VARIABLES //
+$brand-primary: #5988ff;
+$on-brand-primary: #ffffff; // Farbe des Textes/Icons auf der Primärfarbe
+$text-body: #000000;
+
+// FONT SIZE VARIABLES //
+$font-size-base: 62.5%; // 10px
+$font-size-h1: 7.3rem;
+$font-size-h2: 6.4rem;
+$font-size-h3: 4.6rem;
+$font-size-subtitle: 2.3rem;
+$font-size-body: 1.6rem;
+$font-size-small: 0.8rem;
+
+// FONT FAMILY VARIABLES //
+$font-baloo: "Baloo", cursive;
+$font-montserrat: "Montserrat", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+
+:root {
+  font-size: $font-size-base;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  position: relative;
+}
+
+// CONTENT LIMITATION //
+.background {
+  width: 100%;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+//FONTS//
+@font-face {
+  font-family: "Baloo";
+  src: url("../src/assets/fonts/Baloo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; // Empfohlen für Performance
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap; // Empfohlen für Performance
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../src/assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; // Empfohlen für Performance
+}

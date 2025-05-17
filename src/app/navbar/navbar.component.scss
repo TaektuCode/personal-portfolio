@@ -1,0 +1,22 @@
+@import "../../styles.scss";
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 14.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 3.7rem 2.5rem;
+  align-items: center;
+
+  .icon_my-logo {
+    width: 6.4rem;
+    height: 6.4rem;
+    fill: $brand-primary;
+  }
+  .icon_burger-menu {
+    width: 3rem;
+    height: 2.8rem;
+    stroke: $brand-primary;
+  }
+}
