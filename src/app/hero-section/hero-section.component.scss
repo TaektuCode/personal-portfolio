@@ -1,0 +1,50 @@
+@import "../../styles.scss";
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background: linear-gradient(
+    180deg,
+    $on-brand-primary 0%,
+    $on-brand-primary-gradient 50%
+  );
+  .bubble {
+    position: absolute;
+    top: -2rem;
+    left: -22rem;
+    width: 61.2rem; /* Breite des Quadrats */
+    height: 62.2rem; /* Höhe des Quadrats */
+    background: radial-gradient(
+      circle,
+      $brand-primary 0%,
+      $brand-primary 30%,
+      $brand-primary-gradient 80%
+    );
+    border-radius: 50%; /* Macht die Ecken rund */
+  }
+  .headline-box {
+    width: 37rem;
+    color: $on-brand-primary;
+    .headline_subtitle {
+      font-family: $font-montserrat, sans;
+      font-size: 3.6rem;
+      padding-left: 0.2rem;
+    }
+    .headline_h1 {
+      font-family: $font-baloo, sans;
+      display: flex;
+      flex-direction: column;
+      margin-top: -2rem;
+      .h1_top {
+        font-size: $font-size-h1;
+      }
+      .h1_bottom {
+        font-size: 6.7rem;
+        margin-top: -5rem;
+      }
+    }
+  }
+}

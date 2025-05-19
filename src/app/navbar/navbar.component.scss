@@ -8,11 +8,12 @@ nav {
   justify-content: space-between;
   padding: 3.7rem 2.5rem;
   align-items: center;
+  z-index: 2;
 
   .icon_my-logo {
     width: 6.4rem;
     height: 6.4rem;
-    fill: $brand-primary;
+    fill: $on-brand-primary;
   }
   .icon_burger-menu {
     width: 3rem;

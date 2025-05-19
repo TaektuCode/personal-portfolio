@@ -1,5 +1,10 @@
 {
-  "app": {
-    "hello": "hello {{name}}"
+  "nav": {
+    "hello": ""
+  },
+  "hero": {
+    "headline_top": "FRONTEND",
+    "headline_bottom": "DEVELOPER",
+    "headline-sub": "Hello! I am {{name}}"
   }
 }

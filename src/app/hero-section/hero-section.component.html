@@ -1,9 +1,17 @@
 <div class="background">
   <div class="content-wrapper">
     <header>
+      <div class="bubble"></div>
       <div class="headline-box">
-        <span class="headline_subtitle"></span>
-        <h1 class="headline_h1">{{ "app.hello" | translate : { name } }}</h1>
+        <span class="headline_subtitle">{{
+          "hero.headline-sub" | translate : { name }
+        }}</span>
+        <h1 class="headline_h1">
+          <span class="h1_top">{{ "hero.headline_top" | translate }}</span>
+          <span class="h1_bottom">{{
+            "hero.headline_bottom" | translate
+          }}</span>
+        </h1>
       </div>
     </header>
   </div>
