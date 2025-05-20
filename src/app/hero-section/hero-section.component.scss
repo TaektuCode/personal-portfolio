@@ -11,23 +11,10 @@ header {
     $on-brand-primary 0%,
     $on-brand-primary-gradient 50%
   );
-  .bubble {
-    position: absolute;
-    top: -2rem;
-    left: -22rem;
-    width: 61.2rem; /* Breite des Quadrats */
-    height: 62.2rem; /* Höhe des Quadrats */
-    background: radial-gradient(
-      circle,
-      $brand-primary 0%,
-      $brand-primary 30%,
-      $brand-primary-gradient 80%
-    );
-    border-radius: 50%; /* Macht die Ecken rund */
-  }
   .headline-box {
     width: 37rem;
     color: $on-brand-primary;
+    z-index: 2;
     .headline_subtitle {
       font-family: $font-montserrat, sans;
       font-size: 3.6rem;
