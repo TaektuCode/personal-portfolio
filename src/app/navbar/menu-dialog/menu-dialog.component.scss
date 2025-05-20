@@ -1,0 +1,68 @@
+@import "../../../styles.scss";
+
+.menu-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.825);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  .menu-dialog_bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 14.3rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 3.7rem 2.5rem;
+    align-items: center;
+
+    .icon_my-logo {
+      width: 6.4rem;
+      height: 6.4rem;
+      fill: $brand-primary;
+    }
+    .icon_close-button {
+      width: 3rem;
+      height: 2.8rem;
+      stroke: $brand-primary;
+      fill: $brand-primary;
+    }
+  }
+
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+
+    .menu_item {
+      margin-bottom: 0.5rem;
+
+      a {
+        font-family: $font-montserrat, sans;
+        font-size: $font-size-subtitle;
+        text-decoration: none;
+        color: $brand-primary;
+      }
+      &:not(:last-child) {
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+
+  .close-button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+}
+
+.menu-dialog.open {
+  transform: translateX(0);
+}

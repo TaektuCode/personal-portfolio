@@ -1,6 +1,9 @@
 {
   "nav": {
-    "hello": ""
+    "link_1": "About me",
+    "link_2": "Skills",
+    "link_3": "My work",
+    "link_4": "Contact"
   },
   "hero": {
     "headline_top": "FRONTEND",

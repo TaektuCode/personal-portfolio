@@ -1,0 +1,30 @@
+<div class="menu-dialog" [class.open]="isOpen">
+  <div class="menu-dialog_bar">
+    <div class="icon-box_my-logo">
+      <svg class="icon_my-logo">
+        <use xlink:href="#icon-my-logo"></use>
+      </svg>
+    </div>
+    <div class="icon-box_close-button" (click)="onCloseButtonClick()">
+      <svg class="icon_close-button">
+        <use xlink:href="#icon-close-button"></use>
+      </svg>
+    </div>
+  </div>
+  <nav>
+    <ul class="menu-items">
+      <li class="menu_item">
+        <a href="#">{{ "nav.link_1" | translate }}</a>
+      </li>
+      <li class="menu_item">
+        <a href="#">{{ "nav.link_2" | translate }}</a>
+      </li>
+      <li class="menu_item">
+        <a href="#">{{ "nav.link_3" | translate }}</a>
+      </li>
+      <li class="menu_item">
+        <a href="#">{{ "nav.link_4" | translate }}</a>
+      </li>
+    </ul>
+  </nav>
+</div>
