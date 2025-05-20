@@ -1,23 +1,30 @@
 <div class="background">
   <div class="content-wrapper">
-    <app-bubble
-      top="-2rem"
-      left="-22rem"
-      width="61.2rem"
-      height="62.2rem"
-    ></app-bubble>
-    <header>
-      <div class="headline-box">
-        <span class="headline_subtitle">{{
-          "hero.headline-sub" | translate : { name }
-        }}</span>
-        <h1 class="headline_h1">
-          <span class="h1_top">{{ "hero.headline_top" | translate }}</span>
-          <span class="h1_bottom">{{
-            "hero.headline_bottom" | translate
-          }}</span>
-        </h1>
+    <div class="hero">
+      <div class="hero__bubble-element">
+        <app-bubble
+          top="-2rem"
+          left="-22rem"
+          width="61.2rem"
+          height="62.2rem"
+        ></app-bubble>
       </div>
-    </header>
+
+      <header class="hero__text-content">
+        <div class="hero__headline-group">
+          <span class="hero__subtitle">{{
+            "hero.headline-sub" | translate : { name }
+          }}</span>
+          <h1 class="hero__title">
+            <span class="hero__title-line hero__title-line--top">{{
+              "hero.headline_top" | translate
+            }}</span>
+            <span class="hero__title-line hero__title-line--bottom">{{
+              "hero.headline_bottom" | translate
+            }}</span>
+          </h1>
+        </div>
+      </header>
+    </div>
   </div>
 </div>
