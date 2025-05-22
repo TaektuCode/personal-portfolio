@@ -1,17 +1,18 @@
 <div class="background">
   <div class="content-wrapper">
-    <nav>
-      <div class="icon-box_my-logo">
-        <svg class="icon_my-logo">
+    <nav class="site-nav">
+      <div class="site-nav__logo">
+        <svg class="site-nav__logo-icon">
           <use xlink:href="#icon-my-logo"></use>
         </svg>
       </div>
-      <div class="icon-box_burger-menu" (click)="toggleDialog()">
-        <svg class="icon_burger-menu">
+      <div class="site-nav__menu-toggle" (click)="toggleDialog()">
+        <svg class="site-nav__menu-toggle-icon">
           <use xlink:href="#icon-burger-menu"></use>
         </svg>
       </div>
     </nav>
+
     @if (isDialogVisible) {
     <app-menu-dialog
       [isOpen]="isDialogOpen"

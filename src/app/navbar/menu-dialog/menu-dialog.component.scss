@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@use "../../../styles" as *;
 
 .menu-dialog {
   position: fixed;
@@ -14,7 +14,11 @@
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 
-  .menu-dialog_bar {
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__bar {
     position: absolute;
     top: 0;
     width: 100%;
@@ -23,46 +27,47 @@
     justify-content: space-between;
     padding: 3.7rem 2.5rem;
     align-items: center;
-
-    .icon_my-logo {
-      width: 6.4rem;
-      height: 6.4rem;
-      fill: $brand-primary;
-    }
-    .icon_close-button {
-      width: 3rem;
-      height: 2.8rem;
-      stroke: $brand-primary;
-      fill: $brand-primary;
-    }
   }
 
-  .menu-items {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1rem;
-
-    .menu_item {
-      margin-bottom: 0.5rem;
-
-      a {
-        font-family: $font-montserrat, sans;
-        font-size: $font-size-subtitle;
-        text-decoration: none;
-        color: $brand-primary;
-      }
-      &:not(:last-child) {
-        margin-bottom: 3.5rem;
-      }
-    }
+  &__logo-icon {
+    width: 6.4rem;
+    height: 6.4rem;
+    fill: $brand-primary;
   }
 
-  .close-button {
+  &__close-button {
     padding: 0.5rem 1rem;
     cursor: pointer;
   }
-}
 
-.menu-dialog.open {
-  transform: translateX(0);
+  &__close-button-icon {
+    width: 3rem;
+    height: 2.8rem;
+    stroke: $brand-primary;
+    fill: $brand-primary;
+  }
+
+  &__item-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 0.5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__link {
+    // Element (für die a-Tags)
+    font-family: $font-montserrat, sans;
+    font-size: $font-size-subtitle;
+    text-decoration: none;
+    color: $brand-primary;
+    // display: block; für größere Klickflächen und einheitliches Verhalten
+  }
 }
