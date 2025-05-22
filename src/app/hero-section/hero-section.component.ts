@@ -10,4 +10,6 @@ import { BubbleComponent } from '../ui-elements/bubble/bubble.component';
 })
 export class HeroSectionComponent {
   name = 'Alex';
+  profileImagePath = 'assets/img/profile_alex.png';
+  profileImageAltText = `Profilbild von ${this.name}`;
 }
