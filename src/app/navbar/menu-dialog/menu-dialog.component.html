@@ -25,6 +25,21 @@
       <li class="menu-dialog__item">
         <a class="menu-dialog__link" href="#">{{ "nav.link_4" | translate }}</a>
       </li>
+      <li class="menu-dialog__item menu-dialog__language-switcher">
+        <span
+          class="menu-dialog__language-option"
+          (click)="changeLanguage('de')"
+          [class.active]="isLanguageActive('de')"
+          >DE</span
+        >
+        <span class="menu-dialog__language-separator">/</span>
+        <span
+          class="menu-dialog__language-option"
+          (click)="changeLanguage('en')"
+          [class.active]="isLanguageActive('en')"
+          >EN</span
+        >
+      </li>
     </ul>
   </nav>
 </div>

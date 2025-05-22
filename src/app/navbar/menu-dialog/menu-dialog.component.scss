@@ -63,11 +63,35 @@
   }
 
   &__link {
-    // Element (für die a-Tags)
     font-family: $font-montserrat, sans;
     font-size: $font-size-subtitle;
     text-decoration: none;
     color: $brand-primary;
-    // display: block; für größere Klickflächen und einheitliches Verhalten
+  }
+
+  &__language-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+
+  &__language-option {
+    cursor: pointer;
+    font-family: $font-montserrat, sans;
+    font-size: $font-size-subtitle;
+    padding: 0.4rem 0.8rem;
+    color: $brand-primary;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  &__language-separator {
+    font-size: $font-size-subtitle;
+    margin: 0 0.1rem;
+    color: $brand-primary;
   }
 }
