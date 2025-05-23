@@ -1,12 +1,16 @@
 @use "../../styles" as *;
 
 .aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: $on-brand-primary;
 
   &__bubble-element1 {
     position: absolute;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
     transform: translateY(-50%);
     width: 15rem;
     z-index: 1;
@@ -14,6 +18,69 @@
   &__bubble-element2 {
     position: absolute;
     z-index: 1;
+    top: 0;
     right: 7.5rem;
+  }
+  &__headline {
+    z-index: 3;
+    width: 80%;
+    font-family: $font-baloo, sans;
+    font-size: $font-size-h2;
+    color: $brand-primary;
+    margin: 11rem auto 5rem auto;
+    line-height: 120%;
+    text-align: left;
+  }
+  &__information-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+
+    &__intro {
+      color: $brand-primary;
+      font-family: $font-baloo, sans;
+      font-size: 3.2rem;
+      letter-spacing: 1%;
+    }
+    &__details-list {
+      // Stile für .aboutMe__information-box__details-list
+    }
+
+    &__detail-item {
+      display: flex;
+      align-items: center;
+      &:nth-child(2) {
+        .aboutMe__information-box__detail-text {
+          padding-left: 1.1rem;
+        }
+      }
+      &:nth-child(3) {
+        .aboutMe__information-box__detail-text {
+          padding-left: 1.8rem;
+        }
+      }
+    }
+
+    &__detail-icon {
+      width: 3.25rem;
+      height: 4rem;
+    }
+
+    &__detail-icon2 {
+      width: 4.2rem;
+      height: 4.485rem;
+    }
+    &__detail-icon3 {
+      width: 3.5rem;
+      height: 4.9rem;
+    }
+
+    &__detail-text {
+      color: $brand-primary;
+      font-family: $font-montserrat, sans;
+      font-size: 1.8rem;
+      padding-left: 2rem;
+    }
   }
 }
