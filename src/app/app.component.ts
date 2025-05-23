@@ -8,6 +8,7 @@ import { RouterOutlet } from '@angular/router';
 import { IconSpriteComponent } from './icon-sprite/icon-sprite.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
     IconSpriteComponent,
     NavbarComponent,
     HeroSectionComponent,
+    AboutMeSectionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

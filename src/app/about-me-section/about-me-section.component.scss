@@ -1,0 +1,19 @@
+@use "../../styles" as *;
+
+.aboutMe {
+  background-color: $on-brand-primary;
+
+  &__bubble-element1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    width: 15rem;
+    z-index: 1;
+  }
+  &__bubble-element2 {
+    position: absolute;
+    z-index: 1;
+    right: 7.5rem;
+  }
+}
