@@ -16,4 +16,19 @@
     font-family: $font-baloo;
     color: $on-brand-primary;
   }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__icon {
+      width: 6rem;
+      height: 6rem;
+    }
+    &__name {
+      font-family: $font-montserrat, sans;
+      font-size: 1.4rem;
+      color: $on-brand-primary;
+    }
+  }
 }

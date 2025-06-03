@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Angular",
+    "iconId": "icon-angular"
+  },
+  {
+    "id": 2,
+    "name": "TypeScript",
+    "iconId": "icon-typescript"
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "iconId": "icon-javascript"
+  },
+  {
+    "id": 4,
+    "name": "HTML5",
+    "iconId": "icon-html"
+  },
+  {
+    "id": 5,
+    "name": "CSS",
+    "iconId": "icon-css"
+  },
+  {
+    "id": 6,
+    "name": "Firebase",
+    "iconId": "icon-firebase"
+  },
+  {
+    "id": 7,
+    "name": "Git",
+    "iconId": "icon-git"
+  },
+  {
+    "id": 8,
+    "name": "Material Design",
+    "iconId": "icon-materialDesign"
+  },
+  {
+    "id": 9,
+    "name": "Rest Api",
+    "iconId": "icon-restApi"
+  },
+  {
+    "id": 10,
+    "name": "Scrum",
+    "iconId": "icon-scrum"
+  },
+  {
+    "id": 11,
+    "name": "Growth mindset",
+    "iconId": "icon-growthMindset"
+  }
+]

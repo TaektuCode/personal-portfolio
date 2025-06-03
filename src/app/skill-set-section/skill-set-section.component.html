@@ -2,6 +2,23 @@
   <div class="content-wrapper">
     <div class="skillSet">
       <h2 class="skillSet__headline">Skill set</h2>
+
+      @if (skills.length > 0) {
+      <div class="skillSet__grid">
+        @for (skill of skills; track skill.id) {
+        <div class="skillSet__item">
+          <svg class="skillSet__item__icon" aria-hidden="true">
+            <use [attr.href]="'#' + skill.iconId"></use>
+          </svg>
+          <span class="skillSet__item__name">{{ skill.name }}</span>
+        </div>
+        } @empty {
+        <p>Keine Skills zur Anzeige vorhanden.</p>
+        }
+      </div>
+      } @else {
+      <p>Lade Skills...</p>
+      }
     </div>
   </div>
 </div>
