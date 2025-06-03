@@ -62,4 +62,26 @@
     z-index: 2;
     bottom: 0;
   }
+  &__scroll-down {
+    position: absolute;
+    bottom: 0;
+    right: 2.5rem;
+    display: flex;
+    z-index: 4;
+    align-items: center;
+    rotate: 90deg;
+    transform-origin: top right;
+    gap: 3px;
+    &--text {
+      font-family: $font-poppins, sans;
+      font-size: $font-size-subtitle;
+      color: $brand-primary;
+    }
+    &--icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: $brand-primary;
+      rotate: -90deg;
+    }
+  }
 }
