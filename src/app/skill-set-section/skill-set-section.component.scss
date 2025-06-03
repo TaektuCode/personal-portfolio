@@ -1,0 +1,19 @@
+@use "../../styles" as *;
+
+.skillSet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
+  background: linear-gradient(
+    120deg,
+    $brand-primary 0%,
+    $brand-primary-gradient 90%
+  );
+  &__headline {
+    padding: 3rem 0;
+    font-size: $font-size-h2;
+    font-family: $font-baloo;
+    color: $on-brand-primary;
+  }
+}
