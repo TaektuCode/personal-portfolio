@@ -9,5 +9,8 @@
     "headline_top": "FRONTEND",
     "headline_bottom": "DEVELOPER",
     "headline-sub": "Hello! I am {{name}}"
+  },
+  "footer": {
+    "legal_notices": "Legal Notice"
   }
 }

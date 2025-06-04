@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { SkillSetSectionComponent } from './skill-set-section/skill-set-section.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { SkillSetSectionComponent } from './skill-set-section/skill-set-section.
     HeroSectionComponent,
     AboutMeSectionComponent,
     SkillSetSectionComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
