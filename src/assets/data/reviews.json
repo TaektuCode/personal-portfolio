@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "reviewerName": "Max Mustermann",
+    "projectKey": "reviews.projectX.name",
+    "reviewTextKey": "reviews.projectX.max_mustermann.text"
+  },
+  {
+    "id": 2,
+    "reviewerName": "Erika Beispiel",
+    "projectKey": "reviews.projectY.name",
+    "reviewTextKey": "reviews.projectY.erika_beispiel.text"
+  },
+  {
+    "id": 3,
+    "reviewerName": "Erika Beispiel",
+    "projectKey": "reviews.projectY.name",
+    "reviewTextKey": "reviews.projectZ.erika_beispiel.text"
+  }
+]

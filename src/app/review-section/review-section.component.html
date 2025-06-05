@@ -2,7 +2,19 @@
   <div class="content-wrapper">
     <div class="review">
       <h2 class="review__headline">Need a teamplayer?</h2>
-      <h3 class="review__subtitle">Here what my colleagues said about me</h3>
+      <h3 class="review__subtitle">Here's what my colleagues said about me</h3>
+
+      <div class="review__card-container">
+        @if (reviews.length > 0) { @for (review of reviews; track review.id) {
+        <app-review-card
+          [reviewerName]="review.reviewerName"
+          [projectKey]="review.projectKey"
+          [reviewTextKey]="review.reviewTextKey"
+        ></app-review-card>
+        } } @else {
+        <p>Lade Reviews...</p>
+        }
+      </div>
     </div>
   </div>
 </div>

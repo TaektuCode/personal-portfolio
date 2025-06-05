@@ -10,6 +10,38 @@
     "headline_bottom": "DEVELOPER",
     "headline-sub": "Hello! I am {{name}}"
   },
+  "reviews": {
+    "projectX": {
+      "name": "Website Relaunch X",
+      "max_mustermann": {
+        "text": "Alex was a great asset to our team. His ability to solve complex problems while maintaining focus on the user experience greatly impressed us."
+      }
+    },
+    "projectY": {
+      "name": "Mobile App Y",
+      "erika_beispiel": {
+        "text": "Collaborating with Alex was always professional and pleasant. He is a true team player and significantly contributed to the project's success."
+      }
+    },
+    "projectZ": {
+      "name": "Mobile App Y",
+      "erika_beispiel": {
+        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
+      }
+    },
+    "projectA": {
+      "name": "Mobile App Y",
+      "erika_beispiel": {
+        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
+      }
+    },
+    "projectB": {
+      "name": "Mobile App Y",
+      "erika_beispiel": {
+        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
+      }
+    }
+  },
   "footer": {
     "legal_notices": "Legal Notice"
   }

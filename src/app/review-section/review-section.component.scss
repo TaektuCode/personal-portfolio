@@ -5,23 +5,71 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100dvh;
   height: auto;
   background: linear-gradient(
     120deg,
     $brand-primary 0%,
     $brand-primary-gradient 90%
   );
+  padding-bottom: 4rem; // Vertikales Padding, unten weniger, da keine Swiper Controls mehr
+  position: relative;
+
   &__headline {
-    font-family: $font-baloo;
+    font-family: $font-baloo, sans-serif;
     font-size: $font-size-h4;
     color: $on-brand-primary;
-    padding: 3rem 0 0 0;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
+
   &__subtitle {
-    font-family: $font-montserrat;
+    font-family: $font-montserrat, sans-serif;
     font-size: $font-size-body;
     color: $on-brand-primary;
     font-weight: 400;
+    margin-bottom: 4rem;
+  }
+
+  // Styles für den Scroll Snap Container
+  &__card-container {
+    display: flex; // Ordnet Karten in einer Reihe an
+    overflow-x: auto; // Ermöglicht horizontales Scrollen/Swipen
+    scroll-snap-type: x mandatory; // Aktiviert Snapping auf der X-Achse
+
+    width: 100%; // Nimmt die Breite von .content-wrapper ein
+
+    // Optional: Scrollbar ausblenden
+    -ms-overflow-style: none; /* IE und Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    // scroll-padding hilft, die äußeren Elemente korrekt zu zentrieren, wenn scroll-snap-align: center verwendet wird.
+    // Der Wert sollte ca. (Breite des Containers - Breite eines Slides) / 2 sein, wenn ein einzelner Slide zentriert werden soll.
+    // Beispiel: Wenn ein Slide 80vw breit ist, wäre das padding (100vw - 80vw) / 2 = 10vw.
+    // Da die Breite des Containers hier relativ ist (100% des content-wrappers), ist es einfacher,
+    // die äußeren Slides mit margin zu versehen oder die Breite der Slides so zu wählen, dass es passt.
+    // Für ein einfaches "eine Karte pro Ansicht" auf Mobilgeräten:
+    padding: 0 2rem; // Etwas seitliches Padding, damit die Karten nicht am Rand kleben, wenn sie snappen
+    // Alternativ scroll-padding, wenn Sie präziser steuern wollen, wo gesnappt wird.
+    margin-bottom: 2rem; // Abstand nach unten
+  }
+
+  // Styling für die <app-review-card> Host-Elemente als Scroll-Snap-Items
+  // Es wird direkt das <app-review-card>-Tag gestylt.
+  app-review-card {
+    flex: 0 0 100vw; // Jede Karte nimmt 85% der Viewport-Breite ein (gut für Mobile).
+    // Passen Sie dies an, um zu steuern, wie viel von der nächsten Karte sichtbar ist.
+    scroll-snap-align: center; // Jede Karte schnappt in die Mitte des sichtbaren Bereichs ein.
+    scroll-snap-stop: always; // Stellt sicher, dass es immer an einem Snap-Punkt stoppt.
+
+    // Abstand zwischen den Karten (wird nur rechts angewendet, da die letzte Karte ihn nicht braucht)
+    &:not(:last-child) {
+      margin-right: 15px; // Oder z.B. 4vw
+    }
+
+    // Die review-card.component.scss sollte die Höhe/min-height und das Aussehen der Karte definieren.
   }
 }
