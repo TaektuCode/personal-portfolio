@@ -1,0 +1,40 @@
+@use "../../styles" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    color: $brand-primary;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  &__headline {
+    font-family: $font-baloo;
+    font-weight: 400;
+    font-size: $font-size-h3;
+  }
+  &__subtitle {
+    font-family: $font-montserrat;
+    font-weight: 700;
+    font-size: $font-size-subtitle;
+  }
+  &__cta {
+    font-size: $font-size-body;
+    &-description {
+      font-family: $font-montserrat;
+      color: $text-body;
+      margin-bottom: 2.5rem;
+    }
+    &-text {
+      font-family: $font-poppins;
+      color: $brand-primary;
+    }
+    &-highlight {
+      font-family: $font-baloo;
+      font-size: 1.8rem;
+    }
+  }
+}

@@ -12,6 +12,7 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { SkillSetSectionComponent } from './skill-set-section/skill-set-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReviewSectionComponent } from './review-section/review-section.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { ReviewSectionComponent } from './review-section/review-section.componen
     SkillSetSectionComponent,
     ReviewSectionComponent,
     FooterComponent,
+    ContactSectionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

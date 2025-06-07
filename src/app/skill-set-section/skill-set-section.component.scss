@@ -1,5 +1,13 @@
 @use "../../styles" as *;
 
+.background {
+  background: linear-gradient(
+    120deg,
+    $brand-primary 0%,
+    $brand-primary-gradient 90%
+  );
+}
+
 .skillSet {
   display: flex;
   flex-direction: column;
@@ -7,11 +15,6 @@
   justify-content: flex-start;
   min-height: 100dvh;
   height: auto;
-  background: linear-gradient(
-    120deg,
-    $brand-primary 0%,
-    $brand-primary-gradient 90%
-  );
 
   &__headline {
     padding: 3rem 0;

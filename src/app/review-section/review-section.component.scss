@@ -1,16 +1,19 @@
 @use "../../styles" as *;
 
+.background {
+  background: linear-gradient(
+    120deg,
+    $brand-primary 0%,
+    $brand-primary-gradient 90%
+  );
+}
+
 .review {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   height: auto;
-  background: linear-gradient(
-    120deg,
-    $brand-primary 0%,
-    $brand-primary-gradient 90%
-  );
   padding-bottom: 4rem; // Vertikales Padding, unten weniger, da keine Swiper Controls mehr
   position: relative;
 
