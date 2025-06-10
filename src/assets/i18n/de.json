@@ -42,6 +42,15 @@
       }
     }
   },
+  "form": {
+    "errors": {
+      "name_required": "Name ist ein Pflichtfeld.",
+      "email_required": "E-Mail ist ein Pflichtfeld.",
+      "email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "message_required": "Nachricht ist ein Pflichtfeld.",
+      "message_minlength": "Die Nachricht muss mindestens 10 Zeichen lang sein."
+    }
+  },
   "footer": {
     "legal_notices": "Rechtlicher Hinweis"
   }

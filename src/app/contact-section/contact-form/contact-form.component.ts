@@ -6,15 +6,16 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { CustomButtonComponent } from '../../ui-elements/custom-button/custom-button.component';
-// CommonModule wird nicht mehr benötigt
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
   imports: [
-    ReactiveFormsModule, // WICHTIG für Reactive Forms, muss bleiben
-    CustomButtonComponent, // Ihr benutzerdefinierter Button
-    // CommonModule hier entfernt
+    ReactiveFormsModule,
+    CustomButtonComponent,
+    TranslatePipe,
+    TranslateDirective,
   ],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
@@ -32,6 +33,7 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
+  // --- Getter für Formular-Controls ---
   get name() {
     return this.contactForm.get('name');
   }
@@ -40,6 +42,62 @@ export class ContactFormComponent implements OnInit {
   }
   get message() {
     return this.contactForm.get('message');
+  }
+
+  // === NEU: Getter für jeden einzelnen Fehlerstatus ===
+  // Diese Methoden kapseln die komplette Logik und geben nur `true` oder `false` zurück.
+  // Das Template wird dadurch extrem einfach und typsicher.
+
+  public get showNameRequiredError(): boolean {
+    const control = this.name;
+    // Die !! wandeln das Ergebnis sicher in einen echten boolean (true/false) um.
+    return !!(
+      control?.invalid &&
+      (control?.dirty || control?.touched) &&
+      control.errors?.['required']
+    );
+  }
+
+  public get showEmailRequiredError(): boolean {
+    const control = this.email;
+    return !!(
+      control?.invalid &&
+      (control?.dirty || control?.touched) &&
+      control.errors?.['required']
+    );
+  }
+
+  public get showEmailInvalidError(): boolean {
+    const control = this.email;
+    return !!(
+      control?.invalid &&
+      (control?.dirty || control?.touched) &&
+      control.errors?.['email']
+    );
+  }
+
+  public get showMessageRequiredError(): boolean {
+    const control = this.message;
+    return !!(
+      control?.invalid &&
+      (control?.dirty || control?.touched) &&
+      control.errors?.['required']
+    );
+  }
+
+  public get showMessageMinLengthError(): boolean {
+    const control = this.message;
+    return !!(
+      control?.invalid &&
+      (control?.dirty || control?.touched) &&
+      control.errors?.['minlength']
+    );
+  }
+
+  // Dieser Getter bleibt nützlich, um die Zahl für die Übersetzung bereitzustellen.
+  public get messageRequiredLength(): number {
+    // Gibt die 'requiredLength' zurück oder 0 als sicheren Fallback.
+    return this.message?.errors?.['minlength']?.requiredLength || 0;
   }
 
   onSubmit(): void {

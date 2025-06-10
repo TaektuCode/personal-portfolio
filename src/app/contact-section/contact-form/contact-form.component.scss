@@ -1,14 +1,13 @@
-@use "../../../styles" as *; // Ihr globaler Import
+@use "../../../styles" as *;
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
 
-  // Container für jedes Feld (das <fieldset>-Element im HTML)
   &__field-group {
     position: relative;
     padding: 0;
@@ -17,17 +16,24 @@
     border-radius: 10px;
     transition: border-color 0.2s ease;
 
-    // Wenn ein Element innerhalb des Fieldsets den Fokus hat
     &:focus-within {
       border: 2.5px solid $brand-primary;
-      // Die Legende (Label) bekommt auch die Akzentfarbe
       .contact-form__legend {
         color: $brand-primary;
       }
     }
+
+    .contact-form__input.invalid ~ .contact-form__error-icon,
+    .contact-form__textarea.invalid ~ .contact-form__error-icon {
+      opacity: 1;
+    }
+
+    .contact-form__input.valid ~ .contact-form__success-icon,
+    .contact-form__textarea.valid ~ .contact-form__success-icon {
+      opacity: 1;
+    }
   }
 
-  // Die Legende, die als "Floating Label" agiert
   &__legend {
     position: absolute;
     top: 50%;
@@ -38,15 +44,14 @@
     font-family: $font-poppins;
     font-size: 1.6rem;
     color: $text-body;
-    background-color: $on-brand-primary; // Muss mit dem Section-Hintergrund übereinstimmen
+    background-color: $on-brand-primary;
     padding: 0 0.4rem;
   }
 
-  // Die eigentlichen <input>- und <textarea>-Elemente
   &__input,
   &__textarea {
     width: 100%;
-    padding: 1.2rem;
+    padding: 1.2rem 4rem 1.2rem 1.2rem;
     font-family: $font-poppins;
     font-size: 1.6rem;
     background-color: transparent;
@@ -56,34 +61,40 @@
     &:focus {
       outline: none;
     }
-
-    &.invalid {
-      // Wir wenden den Fehler-Indikator auf das übergeordnete Fieldset an, wenn das Input ungültig ist.
-      // Hinweis: Dies erfordert, dass die .invalid Klasse auf dem .__field-group statt auf dem Input liegt,
-      // was eine kleine TS-Anpassung erfordern würde. Der box-shadow vom letzten Mal ist eine gute CSS-only Lösung.
-      box-shadow: 0 0 0 1px red;
-    }
   }
 
-  /*
-   * === KORRIGIERTER SELEKTOR ===
-   * Dieser Block ersetzt den alten Selektorblock.
-   * Er stylt das Elternelement .__field-group, wenn es ein fokussiertes ODER ausgefülltes Kind-Element enthält.
-   */
+  &__error-icon,
+  &__success-icon {
+    position: absolute;
+    top: 50%;
+    right: 1.2rem;
+    transform: translateY(-50%);
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  // === NEU: Spezifische Positionierung für Icons in der Textarea ===
+  &__textarea ~ &__error-icon,
+  &__textarea ~ &__success-icon {
+    top: 1.2rem; // Fester Abstand von oben, passend zum padding
+    transform: none; // Die vertikale Zentrierung aufheben
+  }
+
   &__field-group:has(.contact-form__input:focus),
   &__field-group:has(.contact-form__input:not(:placeholder-shown)),
   &__field-group:has(.contact-form__textarea:focus),
   &__field-group:has(.contact-form__textarea:not(:placeholder-shown)) {
-    // Wenn die Bedingung zutrifft, wähle die .__legend darin aus und style sie:
     .contact-form__legend {
       top: 0;
       transform: translateY(-50%) scale(0.85);
       font-weight: 600;
-      color: $brand-primary; // Nimmt die Akzentfarbe im Fokus/ausgefüllten Zustand an
+      color: $brand-primary;
     }
   }
 
-  // ... Ihre restlichen Styles für textarea, error, actions ...
   &__textarea {
     resize: vertical;
     min-height: 12rem;
@@ -93,7 +104,7 @@
     p {
       color: red;
       font-size: 1.4rem;
-      margin: 0.5rem 1.2rem 0;
+      margin: 1.25rem 1.2rem;
     }
   }
 

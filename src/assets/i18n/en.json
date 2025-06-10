@@ -42,6 +42,15 @@
       }
     }
   },
+  "form": {
+    "errors": {
+      "name_required": "Name is required.",
+      "email_required": "Email is required.",
+      "email_invalid": "Please enter a valid email address.",
+      "message_required": "Message is required.",
+      "message_minlength": "The message must be at least 10 characters long."
+    }
+  },
   "footer": {
     "legal_notices": "Legal Notice"
   }

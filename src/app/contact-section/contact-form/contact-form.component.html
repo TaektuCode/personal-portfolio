@@ -1,4 +1,5 @@
 <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <!-- FELD FÜR NAME -->
   <fieldset class="contact-form__field-group">
     <legend class="contact-form__legend">Your Name</legend>
     <input
@@ -8,17 +9,23 @@
       class="contact-form__input"
       placeholder=" "
       [class.invalid]="name?.invalid && (name?.dirty || name?.touched)"
+      [class.valid]="name?.valid && (name?.dirty || name?.touched)"
       required
     />
+    <svg class="contact-form__error-icon" aria-hidden="true">
+      <use href="#icon-error"></use>
+    </svg>
+    <svg class="contact-form__success-icon" aria-hidden="true">
+      <use href="#icon-correct"></use>
+    </svg>
   </fieldset>
-  @if (name?.invalid && (name?.dirty || name?.touched)) {
+  @if (showNameRequiredError) {
   <div class="contact-form__error">
-    @if (name?.errors?.['required']) {
-    <p>Name is required.</p>
-    }
+    <p>{{ "form.errors.name_required" | translate }}</p>
   </div>
   }
 
+  <!-- FELD FÜR EMAIL -->
   <fieldset class="contact-form__field-group">
     <legend class="contact-form__legend">Your email</legend>
     <input
@@ -28,19 +35,25 @@
       class="contact-form__input"
       placeholder=" "
       [class.invalid]="email?.invalid && (email?.dirty || email?.touched)"
+      [class.valid]="email?.valid && (email?.dirty || email?.touched)"
       required
     />
-    @if (email?.invalid && (email?.dirty || email?.touched)) {
-    <div class="contact-form__error">
-      @if (email?.errors?.['required']) {
-      <p>Email is required.</p>
-      } @if (email?.errors?.['email']) {
-      <p>Please enter a valid email address.</p>
-      }
-    </div>
-    }
+    <svg class="contact-form__error-icon" aria-hidden="true">
+      <use href="#icon-error"></use>
+    </svg>
+    <svg class="contact-form__success-icon" aria-hidden="true">
+      <use href="#icon-correct"></use>
+    </svg>
   </fieldset>
+  <div class="contact-form__error">
+    @if (showEmailRequiredError) {
+    <p>{{ "form.errors.email_required" | translate }}</p>
+    } @else if (showEmailInvalidError) {
+    <p>{{ "form.errors.email_invalid" | translate }}</p>
+    }
+  </div>
 
+  <!-- FELD FÜR NACHRICHT -->
   <fieldset class="contact-form__field-group">
     <legend class="contact-form__legend">Your message</legend>
     <textarea
@@ -50,19 +63,30 @@
       rows="5"
       placeholder=" "
       [class.invalid]="message?.invalid && (message?.dirty || message?.touched)"
+      [class.valid]="message?.valid && (message?.dirty || message?.touched)"
       required
     ></textarea>
-    @if (message?.invalid && (message?.dirty || message?.touched)) {
-    <div class="contact-form__error">
-      @if (message?.errors?.['required']) {
-      <p>Message is required.</p>
-      } @if (message?.errors?.['minlength']) {
-      <p>The message must be at least 10 characters long.</p>
-      }
-    </div>
-    }
+    <svg class="contact-form__error-icon" aria-hidden="true">
+      <use href="#icon-error"></use>
+    </svg>
+    <svg class="contact-form__success-icon" aria-hidden="true">
+      <use href="#icon-correct"></use>
+    </svg>
   </fieldset>
+  <div class="contact-form__error">
+    @if (showMessageRequiredError) {
+    <p>{{ "form.errors.message_required" | translate }}</p>
+    } @else if (showMessageMinLengthError) {
+    <p>
+      {{
+        "form.errors.message_minlength"
+          | translate : { requiredLength: messageRequiredLength }
+      }}
+    </p>
+    }
+  </div>
 
+  <!-- BUTTONS -->
   <div class="contact-form__actions">
     <app-custom-button
       type="submit"
