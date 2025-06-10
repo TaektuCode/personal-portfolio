@@ -4,12 +4,21 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  &__bubble-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
+  }
   &__header {
     display: flex;
     flex-direction: column;
     color: $brand-primary;
     gap: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin: 12.5rem 0 2.5rem 0;
+    z-index: 2;
   }
   &__headline {
     font-family: $font-baloo;
@@ -23,6 +32,7 @@
   }
   &__cta {
     font-size: $font-size-body;
+    z-index: 2;
     &-description {
       font-family: $font-montserrat;
       color: $text-body;

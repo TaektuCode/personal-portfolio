@@ -1,6 +1,14 @@
 <div class="background">
   <div class="content-wrapper">
     <section class="contact">
+      <div class="contact__bubble-element">
+        <app-bubble
+          top="10vw"
+          left="55vw"
+          width="7rem"
+          height="7rem"
+        ></app-bubble>
+      </div>
       <header class="contact__header">
         <h2 class="contact__headline">Contact</h2>
         <h3 class="contact__subtitle">Got a problem to solve?</h3>
@@ -16,6 +24,9 @@
           Need a Frontend developer?
           <span class="contact__cta-highlight">Contact me!</span>
         </p>
+      </div>
+      <div class="contact__form-wrapper">
+        <app-contact-form></app-contact-form>
       </div>
     </section>
   </div>

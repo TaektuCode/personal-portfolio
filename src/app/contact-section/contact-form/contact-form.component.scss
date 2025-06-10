@@ -1,0 +1,105 @@
+@use "../../../styles" as *; // Ihr globaler Import
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  // Container für jedes Feld (das <fieldset>-Element im HTML)
+  &__field-group {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 1px solid $brand-primary;
+    border-radius: 10px;
+    transition: border-color 0.2s ease;
+
+    // Wenn ein Element innerhalb des Fieldsets den Fokus hat
+    &:focus-within {
+      border: 2.5px solid $brand-primary;
+      // Die Legende (Label) bekommt auch die Akzentfarbe
+      .contact-form__legend {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  // Die Legende, die als "Floating Label" agiert
+  &__legend {
+    position: absolute;
+    top: 50%;
+    left: 1.2rem;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    font-family: $font-poppins;
+    font-size: 1.6rem;
+    color: $text-body;
+    background-color: $on-brand-primary; // Muss mit dem Section-Hintergrund übereinstimmen
+    padding: 0 0.4rem;
+  }
+
+  // Die eigentlichen <input>- und <textarea>-Elemente
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-family: $font-poppins;
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: none;
+    color: $text-body;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.invalid {
+      // Wir wenden den Fehler-Indikator auf das übergeordnete Fieldset an, wenn das Input ungültig ist.
+      // Hinweis: Dies erfordert, dass die .invalid Klasse auf dem .__field-group statt auf dem Input liegt,
+      // was eine kleine TS-Anpassung erfordern würde. Der box-shadow vom letzten Mal ist eine gute CSS-only Lösung.
+      box-shadow: 0 0 0 1px red;
+    }
+  }
+
+  /*
+   * === KORRIGIERTER SELEKTOR ===
+   * Dieser Block ersetzt den alten Selektorblock.
+   * Er stylt das Elternelement .__field-group, wenn es ein fokussiertes ODER ausgefülltes Kind-Element enthält.
+   */
+  &__field-group:has(.contact-form__input:focus),
+  &__field-group:has(.contact-form__input:not(:placeholder-shown)),
+  &__field-group:has(.contact-form__textarea:focus),
+  &__field-group:has(.contact-form__textarea:not(:placeholder-shown)) {
+    // Wenn die Bedingung zutrifft, wähle die .__legend darin aus und style sie:
+    .contact-form__legend {
+      top: 0;
+      transform: translateY(-50%) scale(0.85);
+      font-weight: 600;
+      color: $brand-primary; // Nimmt die Akzentfarbe im Fokus/ausgefüllten Zustand an
+    }
+  }
+
+  // ... Ihre restlichen Styles für textarea, error, actions ...
+  &__textarea {
+    resize: vertical;
+    min-height: 12rem;
+  }
+
+  &__error {
+    p {
+      color: red;
+      font-size: 1.4rem;
+      margin: 0.5rem 1.2rem 0;
+    }
+  }
+
+  &__actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+}

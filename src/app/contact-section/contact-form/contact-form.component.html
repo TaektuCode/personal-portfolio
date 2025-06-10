@@ -1,0 +1,76 @@
+<form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <fieldset class="contact-form__field-group">
+    <legend class="contact-form__legend">Your Name</legend>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      class="contact-form__input"
+      placeholder=" "
+      [class.invalid]="name?.invalid && (name?.dirty || name?.touched)"
+      required
+    />
+  </fieldset>
+  @if (name?.invalid && (name?.dirty || name?.touched)) {
+  <div class="contact-form__error">
+    @if (name?.errors?.['required']) {
+    <p>Name is required.</p>
+    }
+  </div>
+  }
+
+  <fieldset class="contact-form__field-group">
+    <legend class="contact-form__legend">Your email</legend>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      class="contact-form__input"
+      placeholder=" "
+      [class.invalid]="email?.invalid && (email?.dirty || email?.touched)"
+      required
+    />
+    @if (email?.invalid && (email?.dirty || email?.touched)) {
+    <div class="contact-form__error">
+      @if (email?.errors?.['required']) {
+      <p>Email is required.</p>
+      } @if (email?.errors?.['email']) {
+      <p>Please enter a valid email address.</p>
+      }
+    </div>
+    }
+  </fieldset>
+
+  <fieldset class="contact-form__field-group">
+    <legend class="contact-form__legend">Your message</legend>
+    <textarea
+      id="message"
+      formControlName="message"
+      class="contact-form__textarea"
+      rows="5"
+      placeholder=" "
+      [class.invalid]="message?.invalid && (message?.dirty || message?.touched)"
+      required
+    ></textarea>
+    @if (message?.invalid && (message?.dirty || message?.touched)) {
+    <div class="contact-form__error">
+      @if (message?.errors?.['required']) {
+      <p>Message is required.</p>
+      } @if (message?.errors?.['minlength']) {
+      <p>The message must be at least 10 characters long.</p>
+      }
+    </div>
+    }
+  </fieldset>
+
+  <div class="contact-form__actions">
+    <app-custom-button
+      type="submit"
+      size="large"
+      color="primary"
+      [disabled]="contactForm.invalid"
+    >
+      Send a message
+    </app-custom-button>
+  </div>
+</form>
