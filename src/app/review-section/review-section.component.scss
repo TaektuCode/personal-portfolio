@@ -11,7 +11,6 @@
 .review {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
   height: auto;
   padding-bottom: 4rem; // Vertikales Padding, unten weniger, da keine Swiper Controls mehr
@@ -36,17 +35,26 @@
 
   // Styles für den Scroll Snap Container
   &__card-container {
-    display: flex; // Ordnet Karten in einer Reihe an
-    overflow-x: auto; // Ermöglicht horizontales Scrollen/Swipen
-    scroll-snap-type: x mandatory; // Aktiviert Snapping auf der X-Achse
+    // --- START: "Full Bleed" Layout-Anpassung ---
+    width: 100vw; // 1. Breite auf 100% der Viewport-Breite setzen
+    position: relative;
+    left: 50%; // 2. Den linken Rand in die Mitte des Viewports schieben
+    transform: translateX(
+      -50%
+    ); // 3. Um die halbe Viewport-Breite zurück nach links schieben
+    // --- ENDE: "Full Bleed" ---
 
-    width: 100%; // Nimmt die Breite von .content-wrapper ein
+    // Carousel-Styles (CSS Scroll Snap)
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 5vw; // Optional: "Tote Zone" an den Rändern für besseres Snapping der äußeren Karten
 
     // Optional: Scrollbar ausblenden
-    -ms-overflow-style: none; /* IE und Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
+      display: none;
     }
 
     // scroll-padding hilft, die äußeren Elemente korrekt zu zentrieren, wenn scroll-snap-align: center verwendet wird.
@@ -63,16 +71,14 @@
   // Styling für die <app-review-card> Host-Elemente als Scroll-Snap-Items
   // Es wird direkt das <app-review-card>-Tag gestylt.
   app-review-card {
-    flex: 0 0 100vw; // Jede Karte nimmt 85% der Viewport-Breite ein (gut für Mobile).
-    // Passen Sie dies an, um zu steuern, wie viel von der nächsten Karte sichtbar ist.
-    scroll-snap-align: center; // Jede Karte schnappt in die Mitte des sichtbaren Bereichs ein.
-    scroll-snap-stop: always; // Stellt sicher, dass es immer an einem Snap-Punkt stoppt.
+    flex: 0 0 90vw; // Jede Karte nimmt 85% der Viewport-Breite ein.
+    // Sie ist jetzt nicht mehr von der Breite des .content-wrapper abhängig.
+    scroll-snap-align: center; // Jede Karte schnappt in der Mitte ein.
+    scroll-snap-stop: always;
 
-    // Abstand zwischen den Karten (wird nur rechts angewendet, da die letzte Karte ihn nicht braucht)
     &:not(:last-child) {
-      margin-right: 15px; // Oder z.B. 4vw
+      margin-right: 15px; // Abstand zwischen den Karten
     }
-
-    // Die review-card.component.scss sollte die Höhe/min-height und das Aussehen der Karte definieren.
   }
+  // Die review-card.component.scss sollte die Höhe/min-height und das Aussehen der Karte definieren.
 }

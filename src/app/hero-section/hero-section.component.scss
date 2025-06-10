@@ -1,16 +1,19 @@
 @use "../../styles" as *;
 
+.background {
+  background: linear-gradient(
+    180deg,
+    $on-brand-primary 0%,
+    $on-brand-primary-gradient 50%
+  );
+}
+
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100dvh;
-  background: linear-gradient(
-    180deg,
-    $on-brand-primary 0%,
-    $on-brand-primary-gradient 50%
-  );
 
   &__bubble-element {
     position: absolute;
