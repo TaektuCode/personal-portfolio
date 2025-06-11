@@ -7,6 +7,11 @@ import {
 } from '@angular/forms';
 import { CustomButtonComponent } from '../../ui-elements/custom-button/custom-button.component';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
+
+// NEU: Imports für EmailJS und die korrigierte Umgebung
+import emailjs from '@emailjs/browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact-form',
@@ -16,12 +21,15 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
     CustomButtonComponent,
     TranslatePipe,
     TranslateDirective,
+    CommonModule, // Notwendig für die @if-Struktur mit den Fehler-Gettern
   ],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
   contactForm!: FormGroup;
+  // Eigenschaft für den Ladezustand des Buttons
+  isSubmitting = false;
 
   constructor(private fb: FormBuilder) {}
 
@@ -34,7 +42,7 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  // --- Getter für Formular-Controls ---
+  // --- Ihre Getter (sind perfekt so) ---
   get name() {
     return this.contactForm.get('name');
   }
@@ -47,76 +55,78 @@ export class ContactFormComponent implements OnInit {
   get privacy() {
     return this.contactForm.get('privacy');
   }
-
-  // === NEU: Getter für jeden einzelnen Fehlerstatus ===
-  // Diese Methoden kapseln die komplette Logik und geben nur `true` oder `false` zurück.
-  // Das Template wird dadurch extrem einfach und typsicher.
-
   public get showNameRequiredError(): boolean {
-    const control = this.name;
-    // Die !! wandeln das Ergebnis sicher in einen echten boolean (true/false) um.
-    return !!(
-      control?.invalid &&
-      (control?.dirty || control?.touched) &&
-      control.errors?.['required']
+    /* ... */ return !!(
+      this.name?.invalid &&
+      (this.name?.dirty || this.name?.touched) &&
+      this.name.errors?.['required']
     );
   }
-
   public get showEmailRequiredError(): boolean {
-    const control = this.email;
-    return !!(
-      control?.invalid &&
-      (control?.dirty || control?.touched) &&
-      control.errors?.['required']
+    /* ... */ return !!(
+      this.email?.invalid &&
+      (this.email?.dirty || this.email?.touched) &&
+      this.email.errors?.['required']
     );
   }
-
   public get showEmailInvalidError(): boolean {
-    const control = this.email;
-    return !!(
-      control?.invalid &&
-      (control?.dirty || control?.touched) &&
-      control.errors?.['email']
+    /* ... */ return !!(
+      this.email?.invalid &&
+      (this.email?.dirty || this.email?.touched) &&
+      this.email.errors?.['email']
     );
   }
-
   public get showMessageRequiredError(): boolean {
-    const control = this.message;
-    return !!(
-      control?.invalid &&
-      (control?.dirty || control?.touched) &&
-      control.errors?.['required']
+    /* ... */ return !!(
+      this.message?.invalid &&
+      (this.message?.dirty || this.message?.touched) &&
+      this.message.errors?.['required']
     );
   }
-
   public get showMessageMinLengthError(): boolean {
-    const control = this.message;
-    return !!(
-      control?.invalid &&
-      (control?.dirty || control?.touched) &&
-      control.errors?.['minlength']
+    /* ... */ return !!(
+      this.message?.invalid &&
+      (this.message?.dirty || this.message?.touched) &&
+      this.message.errors?.['minlength']
     );
   }
-
   public get showPrivacyError(): boolean {
-    const control = this.privacy;
-    return !!(control?.invalid && control?.touched);
+    /* ... */ return !!(this.privacy?.invalid && this.privacy?.touched);
   }
-
-  // Dieser Getter bleibt nützlich, um die Zahl für die Übersetzung bereitzustellen.
   public get messageRequiredLength(): number {
-    // Gibt die 'requiredLength' zurück oder 0 als sicheren Fallback.
     return this.message?.errors?.['minlength']?.requiredLength || 0;
   }
+  // ------------------------------------
 
+  // === ANGEPASSTE onSubmit-METHODE ===
   onSubmit(): void {
-    if (this.contactForm.valid) {
-      console.log('Formulardaten:', this.contactForm.value);
-      alert('Nachricht gesendet! (Dies ist nur eine Demo)');
-      this.contactForm.reset();
+    if (this.contactForm.valid && !this.isSubmitting) {
+      this.isSubmitting = true;
+
+      emailjs
+        .send(
+          environment.emailjs.serviceId,
+          environment.emailjs.templateId,
+          this.contactForm.value,
+          { publicKey: environment.emailjs.publicKey }
+        )
+        .then(
+          (response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Nachricht erfolgreich gesendet!'); // Hier später ein schöneres Feedback einbauen
+            this.contactForm.reset();
+            this.isSubmitting = false;
+          },
+          (error) => {
+            console.error('FAILED...', error);
+            alert(
+              'Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.'
+            );
+            this.isSubmitting = false;
+          }
+        );
     } else {
       this.contactForm.markAllAsTouched();
-      console.log('Formular ist ungültig.');
     }
   }
 }

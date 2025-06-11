@@ -85,6 +85,8 @@
     </p>
     }
   </div>
+
+  <!-- DATENSCHUTZ-CHECKBOX -->
   <div class="contact-form__privacy">
     <div class="contact-form__privacy-control">
       <input
@@ -106,8 +108,6 @@
         {{ "form.privacy.text_part2" | translate }}
       </label>
     </div>
-
-    <!-- NEU: Fehleranzeige für die Checkbox -->
     @if (showPrivacyError) {
     <div class="contact-form__error">
       <p>{{ "form.errors.privacy_required" | translate }}</p>
@@ -121,9 +121,13 @@
       type="submit"
       size="normal"
       [color]="contactForm.valid ? 'active' : 'inactive'"
-      [disabled]="contactForm.invalid"
+      [disabled]="contactForm.invalid || isSubmitting"
     >
-      Send a message
+      @if(isSubmitting) {
+      <span>Sending...</span>
+      } @else {
+      <span>Send a message</span>
+      }
     </app-custom-button>
   </div>
 </form>
