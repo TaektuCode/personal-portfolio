@@ -30,6 +30,7 @@ export class ContactFormComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],
+      privacy: [false, Validators.requiredTrue],
     });
   }
 
@@ -42,6 +43,9 @@ export class ContactFormComponent implements OnInit {
   }
   get message() {
     return this.contactForm.get('message');
+  }
+  get privacy() {
+    return this.contactForm.get('privacy');
   }
 
   // === NEU: Getter für jeden einzelnen Fehlerstatus ===
@@ -92,6 +96,11 @@ export class ContactFormComponent implements OnInit {
       (control?.dirty || control?.touched) &&
       control.errors?.['minlength']
     );
+  }
+
+  public get showPrivacyError(): boolean {
+    const control = this.privacy;
+    return !!(control?.invalid && control?.touched);
   }
 
   // Dieser Getter bleibt nützlich, um die Zahl für die Übersetzung bereitzustellen.

@@ -3,15 +3,15 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  // gap: 2.5rem; // Da 'gap' fehlt, steuern wir Abstände mit margin
 
   &__field-group {
     position: relative;
     padding: 0;
-    margin: 0;
+    margin-top: 2rem;
     border: 1px solid $brand-primary;
     border-radius: 10px;
     transition: border-color 0.2s ease;
@@ -76,11 +76,10 @@
     transition: opacity 0.2s ease-in-out;
   }
 
-  // === NEU: Spezifische Positionierung für Icons in der Textarea ===
   &__textarea ~ &__error-icon,
   &__textarea ~ &__success-icon {
-    top: 1.2rem; // Fester Abstand von oben, passend zum padding
-    transform: none; // Die vertikale Zentrierung aufheben
+    top: 1.2rem;
+    transform: none;
   }
 
   &__field-group:has(.contact-form__input:focus),
@@ -104,13 +103,54 @@
     p {
       color: red;
       font-size: 1.4rem;
-      margin: 1.25rem 1.2rem;
+      margin: 0.75rem 0 0 0; // Margin angepasst für sauberen Abstand
+      padding: 0 1rem;
+    }
+  }
+
+  // === NEU: Styles für den Privacy-Bereich ===
+  &__privacy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem; // Abstand zum letzten Formularfeld
+  }
+
+  &__privacy-control {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__checkbox {
+    margin-top: 0.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    accent-color: $brand-primary;
+    cursor: pointer;
+  }
+
+  &__privacy-label {
+    font-family: $font-montserrat;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $text-body;
+    cursor: pointer;
+  }
+
+  &__privacy-link {
+    color: $brand-primary;
+    text-decoration: underline;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
     }
   }
 
   &__actions {
-    margin-top: 1rem;
+    margin-top: 2.5rem; // Margin erhöht für mehr Abstand zum Privacy-Hinweis
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 }

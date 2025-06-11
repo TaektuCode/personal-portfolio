@@ -85,13 +85,42 @@
     </p>
     }
   </div>
+  <div class="contact-form__privacy">
+    <div class="contact-form__privacy-control">
+      <input
+        id="privacy"
+        type="checkbox"
+        formControlName="privacy"
+        class="contact-form__checkbox"
+        required
+      />
+      <label for="privacy" class="contact-form__privacy-label">
+        {{ "form.privacy.text_part1" | translate }}
+        <a
+          href="/privacy-policy"
+          class="contact-form__privacy-link"
+          target="_blank"
+        >
+          {{ "form.privacy.link_text" | translate }}
+        </a>
+        {{ "form.privacy.text_part2" | translate }}
+      </label>
+    </div>
+
+    <!-- NEU: Fehleranzeige für die Checkbox -->
+    @if (showPrivacyError) {
+    <div class="contact-form__error">
+      <p>{{ "form.errors.privacy_required" | translate }}</p>
+    </div>
+    }
+  </div>
 
   <!-- BUTTONS -->
   <div class="contact-form__actions">
     <app-custom-button
       type="submit"
-      size="large"
-      color="primary"
+      size="normal"
+      [color]="contactForm.valid ? 'active' : 'inactive'"
       [disabled]="contactForm.invalid"
     >
       Send a message

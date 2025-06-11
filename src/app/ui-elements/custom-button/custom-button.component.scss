@@ -38,6 +38,12 @@ $button-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 
   &--normal {
     font-family: $font-montserrat, sans-serif;
+    height: 5.4rem;
+    width: 16.9rem;
+    font-size: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &--large {
@@ -69,13 +75,25 @@ $button-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
     color: $brand-primary;
   }
 
-  &--secondary {
-    background-color: #6c757d;
-    color: white;
+  &--inactive {
+    background-color: transparent;
+    color: #888;
+    border: 2px solid #888;
   }
 
-  &--danger {
-    background-color: #dc3545;
-    color: white;
+  &--active {
+    background-color: transparent;
+    color: $brand-primary;
+    border: 2px solid $brand-primary;
+    &:active {
+      background-image: linear-gradient(
+        120deg,
+        $brand-primary 0%,
+        $brand-primary-gradient 50%,
+        $on-brand-primary 50%
+      );
+      color: $on-brand-primary;
+      background-size: 220%;
+    }
   }
 }

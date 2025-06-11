@@ -48,7 +48,13 @@
       "email_required": "Email is required.",
       "email_invalid": "Please enter a valid email address.",
       "message_required": "Message is required.",
-      "message_minlength": "The message must be at least 10 characters long."
+      "message_minlength": "The message must be at least 10 characters long.",
+      "privacy_required": "Please accept the privacy policy to continue."
+    },
+    "privacy": {
+      "text_part1": "I've read the ",
+      "link_text": "privacy policy",
+      "text_part2": " and agree to the processing of my data as outlined."
     }
   },
   "footer": {

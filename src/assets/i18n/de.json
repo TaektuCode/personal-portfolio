@@ -48,7 +48,13 @@
       "email_required": "E-Mail ist ein Pflichtfeld.",
       "email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
       "message_required": "Nachricht ist ein Pflichtfeld.",
-      "message_minlength": "Die Nachricht muss mindestens 10 Zeichen lang sein."
+      "message_minlength": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
+      "privacy_required": "Bitte akzeptieren Sie die Datenschutzerklärung."
+    },
+    "privacy": {
+      "text_part1": "Ich habe die ",
+      "link_text": "Datenschutzerklärung",
+      "text_part2": " gelesen und stimme zu."
     }
   },
   "footer": {
