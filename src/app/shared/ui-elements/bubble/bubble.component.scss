@@ -1,0 +1,12 @@
+@use "../../../../styles" as *;
+
+.bubble {
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    $brand-primary 0%,
+    $brand-primary 30%,
+    $brand-primary-gradient 80%
+  );
+  border-radius: 50%;
+}

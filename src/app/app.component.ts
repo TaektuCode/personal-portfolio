@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import {
   TranslateService,
   TranslatePipe,
   TranslateDirective,
 } from '@ngx-translate/core';
-import { RouterOutlet } from '@angular/router';
-import { IconSpriteComponent } from './icon-sprite/icon-sprite.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HeroSectionComponent } from './hero-section/hero-section.component';
-import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
-import { SkillSetSectionComponent } from './skill-set-section/skill-set-section.component';
-import { FooterComponent } from './footer/footer.component';
-import { ReviewSectionComponent } from './review-section/review-section.component';
-import { ContactSectionComponent } from './contact-section/contact-section.component';
-import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
+import { IconSpriteComponent } from './shared/icon-sprite/icon-sprite.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -21,13 +15,7 @@ import { PortfolioSectionComponent } from './portfolio-section/portfolio-section
     RouterOutlet,
     IconSpriteComponent,
     NavbarComponent,
-    HeroSectionComponent,
-    AboutMeSectionComponent,
-    SkillSetSectionComponent,
-    PortfolioSectionComponent,
-    ReviewSectionComponent,
     FooterComponent,
-    ContactSectionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
