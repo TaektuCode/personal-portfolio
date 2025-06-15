@@ -57,11 +57,9 @@
         </nav>
 
         <div class="site-footer__legal-notice">
-          <a
-            href="[LINK ZU IHREN LEGAL NOTICES/IMPRESSUM]"
-            class="site-footer__legal-link"
-            >{{ "footer.legal_notices" | translate }}</a
-          >
+          <a [routerLink]="['/legal-notice']" class="site-footer__legal-link">{{
+            "footer.legal_notices" | translate
+          }}</a>
         </div>
       </div>
     </footer>

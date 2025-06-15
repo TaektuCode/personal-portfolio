@@ -99,9 +99,8 @@
       <label for="privacy" class="contact-form__privacy-label">
         {{ "form.privacy.text_part1" | translate }}
         <a
-          href="/privacy-policy"
+          [routerLink]="['/privacy-policy']"
           class="contact-form__privacy-link"
-          target="_blank"
         >
           {{ "form.privacy.link_text" | translate }}
         </a>

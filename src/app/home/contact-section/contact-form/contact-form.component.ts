@@ -12,11 +12,13 @@ import { CommonModule } from '@angular/common';
 // NEU: Imports für EmailJS und die korrigierte Umgebung
 import emailjs from '@emailjs/browser';
 import { environment } from '../../../../environments/environment';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
   imports: [
+    RouterLink,
     ReactiveFormsModule,
     CustomButtonComponent,
     TranslatePipe,
