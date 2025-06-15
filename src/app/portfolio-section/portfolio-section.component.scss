@@ -1,0 +1,15 @@
+@use "../../styles" as *;
+
+.portfolio {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &--headline {
+      font-family: $font-baloo;
+    }
+    &--subtitle {
+      font-family: $font-montserrat;
+    }
+  }
+}

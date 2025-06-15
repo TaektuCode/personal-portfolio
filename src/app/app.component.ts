@@ -13,6 +13,7 @@ import { SkillSetSectionComponent } from './skill-set-section/skill-set-section.
 import { FooterComponent } from './footer/footer.component';
 import { ReviewSectionComponent } from './review-section/review-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
     HeroSectionComponent,
     AboutMeSectionComponent,
     SkillSetSectionComponent,
+    PortfolioSectionComponent,
     ReviewSectionComponent,
     FooterComponent,
     ContactSectionComponent,

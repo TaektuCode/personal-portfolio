@@ -42,6 +42,10 @@
       }
     }
   },
+  "portfolio": {
+    "headline": "My work",
+    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action."
+  },
   "form": {
     "errors": {
       "name_required": "Name is required.",

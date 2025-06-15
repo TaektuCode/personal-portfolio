@@ -42,6 +42,10 @@
       }
     }
   },
+  "portfolio": {
+    "headline": "Meine Arbeit",
+    "subtitle": "Hier findest du eine Auswahl meiner Projekte. Probier sie aus und überzeuge dich von meinen Fähigkeiten."
+  },
   "form": {
     "errors": {
       "name_required": "Name ist ein Pflichtfeld.",
