@@ -1,0 +1,86 @@
+@use "../../../../styles" as *;
+
+.project-view {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    width: 100%;
+    height: auto; // Höhe passt sich automatisch an für korrektes Seitenverhältnis
+    display: block; // Verhindert kleinen, unerwünschten Abstand unter dem Bild
+
+    // === NEU: BOX-SHADOW HIER HINZUFÜGEN ===
+    // Syntax: offset-x | offset-y | blur-radius | spread-radius | color
+    // 5px nach rechts, 5px nach unten, 15px Weichzeichner, 0px Ausdehnung, Farbe schwarz mit 15% Deckkraft
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+    // Optional, aber empfohlen für ein weicheres Aussehen des Schattens:
+    // border-radius: 3px; // Leichte Abrundung der Ecken des Bildes
+  }
+
+  &__content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__name {
+    font-family: $font-montserrat;
+    font-size: 2.55rem;
+    color: $brand-primary;
+    margin: 0 0 1rem 0;
+  }
+
+  &__tech-list {
+    display: flex; // Ordnet die Listenelemente nebeneinander an
+    flex-wrap: wrap; // Erlaubt einen Zeilenumbruch, falls der Platz nicht reicht
+    justify-content: center; // Zentriert die Zeile mit den Technologien
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    text-align: center; // Stellt sicher, dass umgebrochener Text zentriert ist
+  }
+
+  &__tech-item {
+    font-family: $font-montserrat;
+    font-size: 1.9rem;
+    color: $brand-primary; // Beispielhafte Farbe
+    &::after {
+      content: "|";
+      margin: 0 0.8rem;
+      color: rgba(
+        $brand-primary,
+        0.5
+      ); // Macht den Trennstrich etwas unauffälliger
+      font-weight: 400;
+    }
+
+    // ...außer nach dem allerletzten Element.
+    &:last-child::after {
+      content: ""; // Entfernt den Trennstrich beim letzten Element
+      margin: 0;
+    }
+  }
+
+  &__description {
+    font-family: $font-montserrat;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: $text-body;
+    text-align: center;
+    flex-grow: 1; // Sorgt dafür, dass der Text den Platz füllt
+  }
+
+  &__actions {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button-link {
+    text-decoration: none; // Entfernt die Unterstreichung des Links um den Button
+  }
+}

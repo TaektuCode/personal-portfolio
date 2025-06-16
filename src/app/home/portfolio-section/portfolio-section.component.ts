@@ -1,10 +1,34 @@
-import { Component } from '@angular/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslatePipe } from '@ngx-translate/core';
+import { ProjectViewComponent } from './project-view/project-view.component';
+
+export interface Project {
+  id: number | string;
+  nameKey: string;
+  descriptionKey: string;
+  imageUrl: string;
+  technologies: string[];
+  liveUrl: string;
+  githubUrl: string;
+}
 
 @Component({
   selector: 'app-portfolio-section',
-  imports: [TranslatePipe, TranslateDirective],
+  standalone: true,
+  imports: [TranslatePipe, ProjectViewComponent],
   templateUrl: './portfolio-section.component.html',
-  styleUrl: './portfolio-section.component.scss',
+  styleUrls: ['./portfolio-section.component.scss'],
 })
-export class PortfolioSectionComponent {}
+export class PortfolioSectionComponent implements OnInit {
+  public projects: Project[] = [];
+  private projectsDataUrl = 'assets/data/projects.json';
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http.get<Project[]>(this.projectsDataUrl).subscribe((data) => {
+      this.projects = data;
+    });
+  }
+}

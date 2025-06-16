@@ -46,6 +46,16 @@
     "headline": "Meine Arbeit",
     "subtitle": "Hier findest du eine Auswahl meiner Projekte. Probier sie aus und überzeuge dich von meinen Fähigkeiten."
   },
+  "projects": {
+    "projectOne": {
+      "name": "Order of the Chosen",
+      "description": "Deine Fähigkeiten sind in diesem objektorientierten Jump-, Run- und Throw-Abenteuer gefragt. Übernimm die Kontrolle über Flicker, meistere seine Fähigkeiten und bekämpfe wilde Gegner, um sein Reich von der Tyrannei eines mächtigen Ork-Kriegsherrn zu befreien."
+    },
+    "projectTwo": {
+      "name": "Projekt Zwei Name",
+      "description": "Eine Beschreibung Ihres zweiten großartigen Projekts auf Deutsch."
+    }
+  },
   "form": {
     "errors": {
       "name_required": "Name ist ein Pflichtfeld.",

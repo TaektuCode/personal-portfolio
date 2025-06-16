@@ -2,7 +2,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export type ButtonSize = 'small' | 'normal' | 'medium' | 'large';
-export type ButtonColor = 'primary' | 'inactive' | 'active';
+export type ButtonColor =
+  | 'primary'
+  | 'secondary'
+  | 'third'
+  | 'inactive'
+  | 'active';
 
 @Component({
   selector: 'app-custom-button',

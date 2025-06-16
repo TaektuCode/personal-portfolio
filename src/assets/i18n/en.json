@@ -46,6 +46,16 @@
     "headline": "My work",
     "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action."
   },
+  "projects": {
+    "projectOne": {
+      "name": "Order of the Chosen",
+      "description": "Your skills are needed in this object-oriented jump, run, and throw adventure. Take control of Flicker, master his abilities, and battle fierce enemies to save his realm from the tyranny of a powerful Orc warchief."
+    },
+    "projectTwo": {
+      "name": "Project Two Name",
+      "description": "A description of your second awesome project in English."
+    }
+  },
   "form": {
     "errors": {
       "name_required": "Name is required.",

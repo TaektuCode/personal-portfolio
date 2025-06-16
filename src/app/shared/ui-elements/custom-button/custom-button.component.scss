@@ -29,7 +29,27 @@ $button-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 
   /* Größen-Varianten */
   &--small {
-    font-family: $font-poppins, sans-serif;
+    font-family: $font-poppins;
+    font-size: 1.8rem;
+    height: 4.5rem;
+    width: 13rem;
+    padding: 1rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    background-size: 100%;
+    &:active {
+      background-image: linear-gradient(
+        120deg,
+        $brand-primary 0%,
+        $brand-primary-gradient 50%,
+        $on-brand-primary 30%
+      );
+      color: $on-brand-primary;
+      background-size: 220%;
+      transform: scale(1.1);
+    }
   }
 
   &--medium {
@@ -73,6 +93,17 @@ $button-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
   &--primary {
     background-color: $on-brand-primary;
     color: $brand-primary;
+  }
+
+  &--secondary {
+    background-color: $brand-primary;
+    color: $on-brand-primary;
+  }
+
+  &--third {
+    background-color: transparent;
+    color: $brand-primary;
+    border: 2px solid $brand-primary;
   }
 
   &--inactive {

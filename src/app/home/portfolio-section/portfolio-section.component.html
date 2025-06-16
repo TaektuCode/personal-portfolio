@@ -9,7 +9,20 @@
           {{ "portfolio.subtitle" | translate }}
         </h3>
       </header>
-      <div class="portfolio__projects"></div>
+
+      <div class="portfolio__projects">
+        @if (projects.length > 0) { @for (project of projects; track project.id)
+        {
+        <app-project-view
+          [nameKey]="project.nameKey"
+          [descriptionKey]="project.descriptionKey"
+          [imageUrl]="project.imageUrl"
+          [technologies]="project.technologies"
+          [liveUrl]="project.liveUrl"
+          [githubUrl]="project.githubUrl"
+        ></app-project-view>
+        } }
+      </div>
     </div>
   </div>
 </div>

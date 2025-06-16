@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nameKey": "projects.projectOne.name",
+    "descriptionKey": "projects.projectOne.description",
+    "imageUrl": "/assets/img/projects/orderOfTheChosen.webp",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "liveUrl": "https://www.ihre-live-domain.de",
+    "githubUrl": "https://github.com/TaektuCode/portfolio"
+  },
+  {
+    "id": 2,
+    "nameKey": "projects.projectTwo.name",
+    "descriptionKey": "projects.projectTwo.description",
+    "imageUrl": "/assets/img/projects/pokedex.webp",
+    "technologies": ["React", "Firebase", "Material UI"],
+    "liveUrl": "https://live-demo-two.example.com",
+    "githubUrl": "https://github.com/TaektuCode/project-two"
+  }
+]
