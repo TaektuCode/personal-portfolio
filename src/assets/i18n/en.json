@@ -101,5 +101,20 @@
       "platform_text": "The European Commission provides a platform for online dispute resolution (ODR):",
       "participation_text": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
     }
+  },
+  "privacy_policy": {
+    "main_headline": "Privacy Policy",
+    "section_1_title": "1. Privacy at a Glance",
+    "general_info_title": "General Information",
+    "general_info_text": "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. Detailed information on the subject of data protection can be found in our privacy policy listed under this text.",
+    "responsible_person_title": "Responsible party",
+    "responsible_person_text": "The responsible party for data processing on this website is:\n\nAlex Russotto\nKirchbühl 1\n79669 Zell i.W.\n\nPhone: +49 15752237505\nEmail: info@russottoalex.dev",
+    "section_2_title": "2. Hosting and Data Collection",
+    "hosting_title": "External Hosting (Netlify)",
+    "hosting_text": "This website is hosted by Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco, California 94104, USA. When you visit our website, Netlify collects various log files including your IP addresses. This is based on Art. 6 (1) (f) GDPR. We have a legitimate interest in the most reliable presentation of our website. A data processing agreement (DPA) has been concluded with Netlify to ensure data protection compliant handling.",
+    "contact_form_title": "Contact Form (EmailJS)",
+    "contact_form_text": "If you send us inquiries via the contact form, your details from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in the event of follow-up questions, and forwarded to our email inbox via the third-party provider EmailJS (EmailJS PTE. LTD., Singapore). This data is processed on the basis of Art. 6 (1) (b) GDPR, if your inquiry is related to the fulfillment of a contract or is necessary for the performance of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of inquiries addressed to us (Art. 6 (1) (f) GDPR). A DPA has also been concluded with EmailJS.",
+    "section_3_title": "3. Your Rights as a Data Subject",
+    "rights_text": "Within the framework of the applicable legal provisions, you have the right at any time to free information about your stored personal data, its origin and recipients and the purpose of the data processing and, if applicable, a right to correction or deletion of this data. For this purpose, as well as for further questions on the subject of personal data, you can contact us at any time."
   }
 }

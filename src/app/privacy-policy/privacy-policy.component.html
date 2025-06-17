@@ -1,1 +1,59 @@
-<p>privacy-policy works!</p>
+<div class="background">
+  <div class="content-wrapper">
+    <div class="privacy-policy">
+      <h1 class="privacy-policy__main-headline">
+        {{ "privacy_policy.main_headline" | translate }}
+      </h1>
+
+      <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-headline">
+          {{ "privacy_policy.section_1_title" | translate }}
+        </h2>
+
+        <h3 class="privacy-policy__sub-headline">
+          {{ "privacy_policy.general_info_title" | translate }}
+        </h3>
+        <p class="privacy-policy__paragraph">
+          {{ "privacy_policy.general_info_text" | translate }}
+        </p>
+
+        <h3 class="privacy-policy__sub-headline">
+          {{ "privacy_policy.responsible_person_title" | translate }}
+        </h3>
+        <address
+          class="privacy-policy__address"
+          [innerHTML]="'privacy_policy.responsible_person_text' | translate"
+        ></address>
+      </section>
+
+      <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-headline">
+          {{ "privacy_policy.section_2_title" | translate }}
+        </h2>
+
+        <h3 class="privacy-policy__sub-headline">
+          {{ "privacy_policy.hosting_title" | translate }}
+        </h3>
+        <p class="privacy-policy__paragraph">
+          {{ "privacy_policy.hosting_text" | translate }}
+        </p>
+
+        <h3 class="privacy-policy__sub-headline">
+          {{ "privacy_policy.contact_form_title" | translate }}
+        </h3>
+        <p class="privacy-policy__paragraph">
+          {{ "privacy_policy.contact_form_text" | translate }}
+        </p>
+      </section>
+
+      <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-headline">
+          {{ "privacy_policy.section_3_title" | translate }}
+        </h2>
+        <p class="privacy-policy__paragraph">
+          {{ "privacy_policy.rights_text" | translate }}
+        </p>
+      </section>
+    </div>
+  </div>
+</div>

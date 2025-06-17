@@ -13,7 +13,7 @@ import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit, OnDestroy {
-  public isOnLegalPage = false;
+  public useAlternateLogoColor = false;
   private routerSubscription!: Subscription;
 
   public isDialogVisible = false;
@@ -25,7 +25,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.routerSubscription = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        this.isOnLegalPage = event.urlAfterRedirects === '/legal-notice';
+        const darkLogoPages = ['/legal-notice', '/privacy-policy'];
+
+        this.useAlternateLogoColor = darkLogoPages.includes(
+          event.urlAfterRedirects
+        );
       });
   }
 

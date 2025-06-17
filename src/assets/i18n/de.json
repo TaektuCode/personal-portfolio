@@ -101,5 +101,20 @@
       "platform_text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:",
       "participation_text": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
     }
+  },
+  "privacy_policy": {
+    "main_headline": "Datenschutzerklärung",
+    "section_1_title": "1. Datenschutz auf einen Blick",
+    "general_info_title": "Allgemeine Hinweise",
+    "general_info_text": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.",
+    "responsible_person_title": "Verantwortliche Stelle",
+    "responsible_person_text": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:\n\nAlex Russotto\nKirchbühl 1\n79669 Zell i.W.\n\nTelefon: +49 15752237505\nE-Mail: info@russottoalex.dev",
+    "section_2_title": "2. Hosting und Datenerfassung",
+    "hosting_title": "Externes Hosting (Netlify)",
+    "hosting_text": "Diese Website wird bei Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco, California 94104, USA, gehostet. Wenn Sie unsere Website besuchen, erfasst Netlify verschiedene Logfiles einschließlich Ihrer IP-Adressen. Dies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Mit Netlify wurde ein Vertrag zur Auftragsverarbeitung (AVV) bzw. ein Data Processing Addendum (DPA) geschlossen, um den datenschutzkonformen Umgang zu gewährleisten.",
+    "contact_form_title": "Kontaktformular (EmailJS)",
+    "contact_form_text": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert und über den Drittanbieter EmailJS (EmailJS PTE. LTD., Singapur) an unser E-Mail-Postfach weitergeleitet. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Mit EmailJS wurde ebenfalls ein DPA geschlossen.",
+    "section_3_title": "3. Ihre Rechte als Betroffener",
+    "rights_text": "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden."
   }
 }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-privacy-policy',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+  styleUrls: ['./privacy-policy.component.scss'],
 })
-export class PrivacyPolicyComponent {
-
-}
+export class PrivacyPolicyComponent {}
