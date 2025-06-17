@@ -1,0 +1,81 @@
+<div class="background">
+  <div class="content-wrapper">
+    <div class="legal-notice-page">
+      <h1 class="legal-notice-page__main-headline">
+        {{ "legal.main_headline" | translate }}
+      </h1>
+
+      <section class="legal-notice-page__section">
+        <p class="legal-notice-page__paragraph">
+          {{ "legal.impressum.according_to" | translate }}
+        </p>
+        <address
+          class="legal-notice-page__address"
+          [innerHTML]="'legal.impressum.address_title' | translate"
+        ></address>
+
+        <h3 class="legal-notice-page__sub-headline">
+          {{ "legal.contact.title" | translate }}
+        </h3>
+        <ul class="legal-notice-page__contact-list">
+          <li>
+            {{ "legal.contact.phone_label" | translate }}: +49 15752237505
+          </li>
+          <li>
+            {{ "legal.contact.email_label" | translate }}:
+            info&#64;russottoalex.dev
+          </li>
+        </ul>
+
+        <h3 class="legal-notice-page__sub-headline">
+          {{ "legal.impressum.content_responsibility_title" | translate }}
+        </h3>
+        <address
+          class="legal-notice-page__address"
+          [innerHTML]="
+            'legal.impressum.content_responsibility_address' | translate
+          "
+        ></address>
+      </section>
+
+      <section class="legal-notice-page__section">
+        <h2 class="legal-notice-page__section-headline">
+          {{ "legal.disclaimer.title" | translate }}
+        </h2>
+
+        <h3 class="legal-notice-page__sub-headline">
+          {{ "legal.disclaimer.content_liability_title" | translate }}
+        </h3>
+        <p class="legal-notice-page__paragraph">
+          {{ "legal.disclaimer.content_liability_text" | translate }}
+        </p>
+
+        <h3 class="legal-notice-page__sub-headline">
+          {{ "legal.disclaimer.link_liability_title" | translate }}
+        </h3>
+        <p class="legal-notice-page__paragraph">
+          {{ "legal.disclaimer.link_liability_text" | translate }}
+        </p>
+
+        <h3 class="legal-notice-page__sub-headline">
+          {{ "legal.disclaimer.copyright_title" | translate }}
+        </h3>
+        <p class="legal-notice-page__paragraph">
+          {{ "legal.disclaimer.copyright_text" | translate }}
+        </p>
+      </section>
+
+      <section class="legal-notice-page__section">
+        <h2 class="legal-notice-page__section-headline">
+          {{ "legal.dispute_resolution.title" | translate }}
+        </h2>
+        <p class="legal-notice-page__paragraph">
+          {{ "legal.dispute_resolution.platform_text" | translate }}
+        </p>
+        <p class="legal-notice-page__paragraph">
+          {{ "legal.dispute_resolution.participation_text" | translate }}
+        </p>
+      </section>
+    </div>
+  </div>
+</div>

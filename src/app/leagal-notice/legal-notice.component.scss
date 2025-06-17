@@ -1,0 +1,81 @@
+@use "../../styles" as *;
+
+.legal-notice-page {
+  padding-top: 14.3rem;
+  width: 100%;
+  margin: 0 auto;
+  color: $text-body;
+
+  &__main-headline {
+    font-family: $font-baloo;
+    font-size: 2.75rem;
+    color: $brand-primary;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__section-headline {
+    font-family: $font-baloo, sans-serif;
+    font-size: 2.4rem;
+    color: $brand-primary;
+    margin: 0 0 2.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba($brand-primary, 0.2);
+  }
+
+  &__sub-headline {
+    font-family: $font-montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: $text-body;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__paragraph {
+    font-family: $font-montserrat, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+  }
+
+  &__address {
+    font-style: normal;
+    font-family: $font-montserrat, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    white-space: pre-line;
+  }
+
+  &__contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: $font-montserrat, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  a {
+    color: $brand-primary;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: darken($brand-primary, 10%);
+    }
+  }
+}

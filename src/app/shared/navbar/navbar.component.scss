@@ -16,9 +16,13 @@
     width: 6.4rem;
     height: 6.4rem;
     fill: $on-brand-primary;
+    transition: fill 0.3s ease-in-out;
+
+    &.logo--dark-fill {
+      fill: $brand-primary;
+    }
   }
 
-  // Container für den Burger-Menü-Button
   &__menu-toggle {
     cursor: pointer;
   }
