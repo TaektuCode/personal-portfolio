@@ -5,7 +5,7 @@
   from = "/orderOfTheChosen/*"
 
   # Die "echte" URL Ihres gehosteten Spiels bei Netlify
-  to = "https://order-of-the-chosen-game.netlify.app/:splat"
+  to = "https://order-of-the-chosen.netlify.app//:splat"
 
   # Status 200 bedeutet "Rewrite" (URL bleibt gleich), nicht "Redirect" (URL ändert sich)
   status = 200
