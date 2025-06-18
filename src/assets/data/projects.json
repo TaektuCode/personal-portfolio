@@ -5,7 +5,6 @@
     "descriptionKey": "projects.projectOne.description",
     "imageUrl": "/assets/img/projects/orderOfTheChosen.webp",
     "technologies": ["JavaScript", "HTML", "CSS"],
-
     "liveUrl": "/orderOfTheChosen/",
     "githubUrl": "https://github.com/TaektuCode/2d-pixelart-game"
   },
@@ -14,8 +13,17 @@
     "nameKey": "projects.projectTwo.name",
     "descriptionKey": "projects.projectTwo.description",
     "imageUrl": "/assets/img/projects/pokedex.webp",
-    "technologies": ["React", "Firebase", "Material UI"],
-    "liveUrl": "https://live-demo-two.example.com",
-    "githubUrl": "https://github.com/TaektuCode/project-two"
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "liveUrl": "/pokedex/",
+    "githubUrl": "https://github.com/TaektuCode/pokedex-app"
+  },
+  {
+    "id": 2,
+    "nameKey": "projects.projectThree.name",
+    "descriptionKey": "projects.projectThree.description",
+    "imageUrl": "/assets/img/projects/join.webp",
+    "technologies": ["Angular", "Typescript", "SCSS", "Firebase"],
+    "liveUrl": "/join/",
+    "githubUrl": "https://github.com/TaektuCode/Join-private"
   }
 ]

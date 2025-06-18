@@ -1,14 +1,19 @@
-# netlify.toml im Stammverzeichnis Ihres PORTFOLIO-Projekts
+# netlify.toml
 
 [[redirects]]
-  # Der Pfad auf Ihrer Hauptdomain, der "maskiert" werden soll
   from = "/orderOfTheChosen/*"
-
-  # Die "echte" URL Ihres gehosteten Spiels bei Netlify
-  to = "https://order-of-the-chosen.netlify.app//:splat"
-
-  # Status 200 bedeutet "Rewrite" (URL bleibt gleich), nicht "Redirect" (URL ändert sich)
+  to = "https://order-of-the-chosen.netlify.app/:splat"
   status = 200
+  force = true
 
-  # 'force = true' stellt sicher, dass diese Regel auch für existierende Dateien greift
+[[redirects]]
+  from = "/pokedex/*"
+  to = "https://pokedex2025-app.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/join/*"
+  to = "https://join-app.netlify.app/:splat"
+  status = 200
   force = true

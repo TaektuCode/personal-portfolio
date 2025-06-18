@@ -52,8 +52,12 @@
       "description": "Your skills are needed in this object-oriented jump, run, and throw adventure. Take control of Flicker, master his abilities, and battle fierce enemies to save his realm from the tyranny of a powerful Orc warchief."
     },
     "projectTwo": {
-      "name": "Project Two Name",
-      "description": "A description of your second awesome project in English."
+      "name": "Pokedex",
+      "description": "This interactive Pokedex allows users to search, filter, and explore a vast collection of Pokémon. All data is fetched live from the PokéAPI and dynamically rendered using vanilla JavaScript."
+    },
+    "projectThree": {
+      "name": "Join",
+      "description": "A Kanban-style task manager designed to streamline team workflows. Users can create tasks, assign them to members, set categories, and visually track progress on an interactive board."
     }
   },
   "form": {
