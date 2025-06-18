@@ -5,8 +5,9 @@
     "descriptionKey": "projects.projectOne.description",
     "imageUrl": "/assets/img/projects/orderOfTheChosen.webp",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "liveUrl": "https://www.ihre-live-domain.de",
-    "githubUrl": "https://github.com/TaektuCode/portfolio"
+
+    "liveUrl": "/orderOfTheChosen/",
+    "githubUrl": "https://github.com/TaektuCode/Order-of-the-chosen"
   },
   {
     "id": 2,
