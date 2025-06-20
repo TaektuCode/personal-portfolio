@@ -3,23 +3,18 @@
 .project-view {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5rem;
 
   &__image {
     width: 100%;
-    height: auto; // Höhe passt sich automatisch an für korrektes Seitenverhältnis
-    display: block; // Verhindert kleinen, unerwünschten Abstand unter dem Bild
-
-    // === NEU: BOX-SHADOW HIER HINZUFÜGEN ===
-    // Syntax: offset-x | offset-y | blur-radius | spread-radius | color
-    // 5px nach rechts, 5px nach unten, 15px Weichzeichner, 0px Ausdehnung, Farbe schwarz mit 15% Deckkraft
+    height: auto;
+    display: block;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-
-    // Optional, aber empfohlen für ein weicheres Aussehen des Schattens:
-    // border-radius: 3px; // Leichte Abrundung der Ecken des Bildes
+    border-radius: 10px;
   }
 
   &__content {
-    padding: 2rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,56 +23,53 @@
 
   &__name {
     font-family: $font-montserrat;
-    font-size: 2.55rem;
+    font-size: clamp(2.2rem, 2.4rem + 1vw, 2.8rem);
     color: $brand-primary;
     margin: 0 0 1rem 0;
+    text-align: center;
   }
 
   &__tech-list {
-    display: flex; // Ordnet die Listenelemente nebeneinander an
-    flex-wrap: wrap; // Erlaubt einen Zeilenumbruch, falls der Platz nicht reicht
-    justify-content: center; // Zentriert die Zeile mit den Technologien
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0 0 1.5rem 0;
-    text-align: center; // Stellt sicher, dass umgebrochener Text zentriert ist
+    text-align: center;
   }
 
   &__tech-item {
     font-family: $font-montserrat;
     font-size: 1.9rem;
-    color: $brand-primary; // Beispielhafte Farbe
+    color: $brand-primary;
     &::after {
       content: "|";
       margin: 0 0.8rem;
-      color: rgba(
-        $brand-primary,
-        0.5
-      ); // Macht den Trennstrich etwas unauffälliger
+      color: rgba($brand-primary, 0.5);
       font-weight: 400;
     }
 
-    // ...außer nach dem allerletzten Element.
     &:last-child::after {
-      content: ""; // Entfernt den Trennstrich beim letzten Element
+      content: "";
       margin: 0;
     }
   }
 
   &__description {
     font-family: $font-montserrat;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 1.3rem + 1vw, 1.6rem);
     line-height: 120%;
     color: $text-body;
     text-align: center;
-    flex-grow: 1; // Sorgt dafür, dass der Text den Platz füllt
+    flex-grow: 1;
+    padding-bottom: 2rem;
   }
 
   &__actions {
     width: 100%;
-    margin-top: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   &__button-link {

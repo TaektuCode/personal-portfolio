@@ -10,37 +10,59 @@
     "headline_bottom": "DEVELOPER",
     "headline-sub": "Hello! I am {{name}}"
   },
+  "about_me": {
+    "headline": "Let's work together!",
+    "intro": "I am",
+    "details": {
+      "location": "located in Lörrach",
+      "remote": "open to Work Remote",
+      "relocate": "open to relocate"
+    },
+    "passion": {
+      "text": "I'm passionate about building robust and scalable frontend architectures. My inspiration comes from understanding how modern technologies work under the hood and using that knowledge to write clean, maintainable, and performant code. I am always driven by a desire to learn what's next, whether it's exploring new frameworks or mastering advanced TypeScript patterns to build more resilient applications."
+    },
+    "strengths": {
+      "text": "My approach to problem-solving is analytical and structured. I begin by clearly defining the problem and identifying potential edge cases before writing a single line of code. I value methodical debugging and believe that every challenge is an opportunity to improve. Through persistence and clear communication, I aim to deliver solutions that are not only effective in the short term but also easy for any developer to understand and extend in the future."
+    },
+    "cta_button": "Send a Message"
+  },
+  "skill_set_section": {
+    "headline": "Skills",
+    "empty": "No skills available to display.",
+    "loading": "Loading skills..."
+  },
+  "reviews_section": {
+    "headline": "Need a team player?",
+    "subtitle": "Here's what my colleagues said about me",
+    "loading": "Loading reviews..."
+  },
   "reviews": {
-    "projectX": {
-      "name": "Website Relaunch X",
-      "max_mustermann": {
-        "text": "Alex was a great asset to our team. His ability to solve complex problems while maintaining focus on the user experience greatly impressed us."
+    "project_label": "Project",
+    "project1": {
+      "name": "Join",
+      "rainer": {
+        "text": "Alex is a very valuable team player. His technical expertise and calm, solution-oriented approach significantly improved not only the code quality but also our team's collaboration."
       }
     },
-    "projectY": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Collaborating with Alex was always professional and pleasant. He is a true team player and significantly contributed to the project's success."
+    "project2": {
+      "name": "Join",
+      "michael": {
+        "text": "I was fortunate to work with Alex on a project. He is a focused and reliable developer whose expertise and pleasant demeanor made the collaboration a true asset."
       }
     },
-    "projectZ": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
-      }
-    },
-    "projectA": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
-      }
-    },
-    "projectB": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
+    "project3": {
+      "name": "Join",
+      "denis": {
+        "text": "Alex brings not only deep technical expertise to the table, but also a strong team spirit. His ability to analyze and optimize processes significantly moved our project forward."
       }
     }
+  },
+  "contact_section": {
+    "headline": "Contact",
+    "subtitle": "Got a problem to solve?",
+    "description": "I'm always looking for new and exciting challenges and projects where I can contribute and expand my skills. If you believe I can add value to your team, don't hesitate to get in touch.",
+    "cta_text": "Need a Frontend developer?",
+    "cta_highlight": "Contact me!"
   },
   "portfolio": {
     "headline": "My work",
@@ -61,6 +83,15 @@
     }
   },
   "form": {
+    "labels": {
+      "name": "Your Name",
+      "email": "Your email",
+      "message": "Your message"
+    },
+    "actions": {
+      "send": "Send a message",
+      "sending": "Sending..."
+    },
     "errors": {
       "name_required": "Name is required.",
       "email_required": "Email is required.",

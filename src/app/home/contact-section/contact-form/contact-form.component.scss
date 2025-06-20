@@ -6,7 +6,6 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  // gap: 2.5rem; // Da 'gap' fehlt, steuern wir Abstände mit margin
 
   &__field-group {
     position: relative;
@@ -46,6 +45,19 @@
     color: $text-body;
     background-color: $on-brand-primary;
     padding: 0 0.4rem;
+    &--textarea {
+      position: absolute;
+      top: 15%;
+      left: 1.2rem;
+      transform: translateY(-15%);
+      transition: all 0.2s ease-out;
+      pointer-events: none;
+      font-family: $font-poppins;
+      font-size: 1.6rem;
+      color: $text-body;
+      background-color: $on-brand-primary;
+      padding: 0 0.4rem;
+    }
   }
 
   &__input,
@@ -87,6 +99,12 @@
   &__field-group:has(.contact-form__textarea:focus),
   &__field-group:has(.contact-form__textarea:not(:placeholder-shown)) {
     .contact-form__legend {
+      top: 0;
+      transform: translateY(-50%) scale(0.85);
+      font-weight: 600;
+      color: $brand-primary;
+    }
+    .contact-form__legend--textarea {
       top: 0;
       transform: translateY(-50%) scale(0.85);
       font-weight: 600;

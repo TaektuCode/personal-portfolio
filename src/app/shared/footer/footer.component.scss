@@ -16,8 +16,8 @@
   &__copyright {
     display: flex;
     justify-content: center;
-    font-family: $font-montserrat, sans-serif;
-    font-size: $font-size-subtitle;
+    font-family: $font-montserrat;
+    font-size: clamp(1.8rem, 1.7rem + 1vw, $font-size-subtitle);
     margin-bottom: 2rem;
   }
   &__copyright-name {

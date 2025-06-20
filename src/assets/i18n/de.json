@@ -10,37 +10,59 @@
     "headline_bottom": "DEVELOPER",
     "headline-sub": "Hallo! Ich bin {{name}}"
   },
+  "about_me": {
+    "headline": "Lass uns was bauen!",
+    "intro": "Ich bin",
+    "details": {
+      "location": "wohnhaft in Lörrach",
+      "remote": "offen für Remote-Arbeit",
+      "relocate": "umzugsbereit"
+    },
+    "passion": {
+      "text": "Meine Leidenschaft ist der Aufbau robuster und skalierbarer Frontend-Architekturen. Meine Inspiration ziehe ich daraus, zu verstehen, wie moderne Technologien unter der Haube funktionieren, und dieses Wissen zu nutzen, um sauberen, wartbaren und performanten Code zu schreiben. Mich treibt der Wunsch an, immer das Nächste zu lernen – sei es das Erkunden neuer Frameworks oder das Meistern fortgeschrittener TypeScript-Muster, um widerstandsfähigere Anwendungen zu bauen."
+    },
+    "strengths": {
+      "text": "Mein Ansatz zur Problemlösung ist analytisch und strukturiert. Ich beginne damit, das Problem klar zu definieren und potenzielle Grenzfälle zu identifizieren, bevor ich eine einzige Zeile Code schreibe. Ich schätze methodisches Debugging und glaube, dass jede Herausforderung eine Chance zur Verbesserung ist. Durch Beharrlichkeit und klare Kommunikation strebe ich danach, Lösungen zu liefern, die nicht nur kurzfristig effektiv, sondern auch für jeden Entwickler in Zukunft leicht verständlich und erweiterbar sind."
+    },
+    "cta_button": "Nachricht senden"
+  },
+  "reviews_section": {
+    "headline": "Teamplayer gesucht?",
+    "subtitle": "Das sagen meine Kollegen über mich",
+    "loading": "Lade Reviews..."
+  },
+  "skill_set_section": {
+    "headline": "Skills",
+    "empty": "Keine Skills zur Anzeige vorhanden.",
+    "loading": "Lade Skills..."
+  },
   "reviews": {
-    "projectX": {
-      "name": "Website Relaunch X",
-      "max_mustermann": {
-        "text": "Alex war eine große Bereicherung für unser Team. Seine Fähigkeit, komplexe Probleme zu lösen und gleichzeitig den Fokus auf die User Experience zu legen, hat uns sehr beeindruckt."
+    "project_label": "Projekt",
+    "project1": {
+      "name": "Join",
+      "rainer": {
+        "text": "Alex ist ein sehr wertvoller Teamplayer. Seine technische Expertise und seine ruhige, lösungsorientierte Art haben nicht nur die Codequalität, sondern auch die Zusammenarbeit im Team maßgeblich verbessert."
       }
     },
-    "projectY": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
+    "project2": {
+      "name": "Join",
+      "michael": {
+        "text": "Ich hatte das Glück, mit Alex in einem Projekt zu arbeiten. Er ist ein fokussierter und zuverlässiger Entwickler, dessen Fachwissen und angenehme Art die Zusammenarbeit zu einem echten Gewinn gemacht haben."
       }
     },
-    "projectZ": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
-      }
-    },
-    "projectA": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
-      }
-    },
-    "projectB": {
-      "name": "Mobile App Y",
-      "erika_beispiel": {
-        "text": "Die Zusammenarbeit mit Alex war stets professionell und angenehm. Er ist ein echter Teamplayer und hat maßgeblich zum Erfolg des Projekts beigetragen."
+    "project3": {
+      "name": "Join",
+      "denis": {
+        "text": "Alex bringt nicht nur fundiertes Fachwissen, sondern auch einen ausgeprägten Teamgeist mit. Seine Fähigkeit, Prozesse zu analysieren und zu optimieren, hat unser Projekt deutlich vorangebracht."
       }
     }
+  },
+  "contact_section": {
+    "headline": "Kontakt",
+    "subtitle": "Ein Problem zu lösen?",
+    "description": "Ich bin immer auf der Suche nach neuen, spannenden Herausforderungen und Projekten, bei denen ich meine Fähigkeiten einbringen und erweitern kann. Wenn Sie glauben, dass ich einen Mehrwert für Ihr Team schaffen kann, zögern Sie nicht, mich zu kontaktieren.",
+    "cta_text": "Benötigen Sie einen Frontend-Entwickler?",
+    "cta_highlight": "Kontaktieren Sie mich!"
   },
   "portfolio": {
     "headline": "Meine Arbeit",
@@ -61,6 +83,15 @@
     }
   },
   "form": {
+    "labels": {
+      "name": "Dein Name",
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht"
+    },
+    "actions": {
+      "send": "Nachricht senden",
+      "sending": "Sende..."
+    },
     "errors": {
       "name_required": "Name ist ein Pflichtfeld.",
       "email_required": "E-Mail ist ein Pflichtfeld.",

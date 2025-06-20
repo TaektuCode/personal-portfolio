@@ -41,10 +41,12 @@
     &-text {
       font-family: $font-poppins;
       color: $brand-primary;
+      text-align: center;
     }
     &-highlight {
       font-family: $font-baloo;
       font-size: 1.8rem;
+      white-space: nowrap;
     }
   }
 }

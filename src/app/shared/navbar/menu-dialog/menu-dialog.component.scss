@@ -22,10 +22,10 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 14.3rem;
+    height: 11rem;
     display: flex;
     justify-content: space-between;
-    padding: 3.7rem 2.5rem;
+    padding: 0 2.5rem;
     align-items: center;
   }
 
@@ -63,8 +63,8 @@
   }
 
   &__link {
-    font-family: $font-montserrat, sans;
-    font-size: $font-size-subtitle;
+    font-family: $font-montserrat;
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 2.8rem);
     text-decoration: none;
     color: $brand-primary;
   }

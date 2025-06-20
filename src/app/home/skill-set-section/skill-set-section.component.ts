@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { TranslatePipe } from '@ngx-translate/core';
 export interface Skill {
   id: number | string;
   name: string;
@@ -8,7 +9,7 @@ export interface Skill {
 
 @Component({
   selector: 'app-skill-set-section',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './skill-set-section.component.html',
   styleUrls: ['./skill-set-section.component.scss'],
 })

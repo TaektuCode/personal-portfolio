@@ -1,20 +1,20 @@
 [
   {
     "id": 1,
-    "reviewerName": "Max Mustermann",
-    "projectKey": "reviews.projectX.name",
-    "reviewTextKey": "reviews.projectX.max_mustermann.text"
+    "reviewerName": "Rainer",
+    "projectKey": "reviews.project1.name",
+    "reviewTextKey": "reviews.project1.rainer.text"
   },
   {
     "id": 2,
-    "reviewerName": "Erika Beispiel",
-    "projectKey": "reviews.projectY.name",
-    "reviewTextKey": "reviews.projectY.erika_beispiel.text"
+    "reviewerName": "Michael",
+    "projectKey": "reviews.project2.name",
+    "reviewTextKey": "reviews.project2.michael.text"
   },
   {
     "id": 3,
-    "reviewerName": "Erika Beispiel",
-    "projectKey": "reviews.projectY.name",
-    "reviewTextKey": "reviews.projectZ.erika_beispiel.text"
+    "reviewerName": "Denis",
+    "projectKey": "reviews.project3.name",
+    "reviewTextKey": "reviews.project3.denis.text"
   }
 ]

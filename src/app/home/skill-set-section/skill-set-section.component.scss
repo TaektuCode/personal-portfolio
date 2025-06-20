@@ -18,7 +18,7 @@
 
   &__headline {
     padding: 3rem 0;
-    font-size: $font-size-h2;
+    font-size: clamp(5.5rem, 3.4rem + 4vw, 6rem);
     font-family: $font-baloo, sans-serif;
     color: $on-brand-primary;
     text-align: center;

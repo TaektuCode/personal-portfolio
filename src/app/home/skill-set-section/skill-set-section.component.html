@@ -1,7 +1,9 @@
 <div class="background">
   <div class="content-wrapper">
     <div class="skillSet">
-      <h2 class="skillSet__headline">Skill set</h2>
+      <h2 class="skillSet__headline">
+        {{ "skill_set_section.headline" | translate }}
+      </h2>
 
       @if (skills.length > 0) {
       <div class="skillSet__grid">
@@ -13,11 +15,11 @@
           <span class="skillSet__item__name">{{ skill.name }}</span>
         </div>
         } @empty {
-        <p>Keine Skills zur Anzeige vorhanden.</p>
+        <p>{{ "skill_set_section.empty" | translate }}</p>
         }
       </div>
       } @else {
-      <p>Lade Skills...</p>
+      <p>{{ "skill_set_section.loading" | translate }}</p>
       }
     </div>
   </div>

@@ -57,7 +57,7 @@ $button-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
   }
 
   &--normal {
-    font-family: $font-montserrat, sans-serif;
+    font-family: $font-montserrat;
     height: 5.4rem;
     width: 16.9rem;
     font-size: 1.75rem;
@@ -67,7 +67,8 @@ $button-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
   }
 
   &--large {
-    font-family: $font-poppins, sans-serif;
+    font-family: $font-poppins;
+    font-size: 2.1rem;
     height: 5.4rem;
     width: 24.2rem;
     border: 2px solid $brand-primary;

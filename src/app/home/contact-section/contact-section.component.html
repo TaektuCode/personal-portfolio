@@ -10,19 +10,23 @@
         ></app-bubble>
       </div>
       <header class="contact__header">
-        <h2 class="contact__headline">Contact</h2>
-        <h3 class="contact__subtitle">Got a problem to solve?</h3>
+        <h2 class="contact__headline">
+          {{ "contact_section.headline" | translate }}
+        </h2>
+        <h3 class="contact__subtitle">
+          {{ "contact_section.subtitle" | translate }}
+        </h3>
       </header>
 
       <div class="contact__cta">
         <p class="contact__cta-description">
-          Encourage people to contact you and describe what role you are
-          interested in. Show that you will add value to their projects through
-          your work.
+          {{ "contact_section.description" | translate }}
         </p>
         <p class="contact__cta-text">
-          Need a Frontend developer?
-          <span class="contact__cta-highlight">Contact me!</span>
+          {{ "contact_section.cta_text" | translate }}
+          <span class="contact__cta-highlight">{{
+            "contact_section.cta_highlight" | translate
+          }}</span>
         </p>
       </div>
       <div class="contact__form-wrapper">

@@ -1,7 +1,8 @@
 <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <!-- FELD FÜR NAME -->
   <fieldset class="contact-form__field-group">
-    <legend class="contact-form__legend">Your Name</legend>
+    <legend class="contact-form__legend">
+      {{ "form.labels.name" | translate }}
+    </legend>
     <input
       id="name"
       type="text"
@@ -25,9 +26,10 @@
   </div>
   }
 
-  <!-- FELD FÜR EMAIL -->
   <fieldset class="contact-form__field-group">
-    <legend class="contact-form__legend">Your email</legend>
+    <legend class="contact-form__legend">
+      {{ "form.labels.email" | translate }}
+    </legend>
     <input
       id="email"
       type="email"
@@ -53,9 +55,10 @@
     }
   </div>
 
-  <!-- FELD FÜR NACHRICHT -->
   <fieldset class="contact-form__field-group">
-    <legend class="contact-form__legend">Your message</legend>
+    <legend class="contact-form__legend--textarea">
+      {{ "form.labels.message" | translate }}
+    </legend>
     <textarea
       id="message"
       formControlName="message"
@@ -86,7 +89,6 @@
     }
   </div>
 
-  <!-- DATENSCHUTZ-CHECKBOX -->
   <div class="contact-form__privacy">
     <div class="contact-form__privacy-control">
       <input
@@ -114,7 +116,6 @@
     }
   </div>
 
-  <!-- BUTTONS -->
   <div class="contact-form__actions">
     <app-custom-button
       type="submit"
@@ -123,9 +124,9 @@
       [disabled]="contactForm.invalid || isSubmitting"
     >
       @if(isSubmitting) {
-      <span>Sending...</span>
+      <span>{{ "form.actions.sending" | translate }}</span>
       } @else {
-      <span>Send a message</span>
+      <span>{{ "form.actions.send" | translate }}</span>
       }
     </app-custom-button>
   </div>

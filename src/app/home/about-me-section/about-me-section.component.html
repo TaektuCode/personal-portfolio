@@ -17,50 +17,47 @@
           height="6.2rem"
         ></app-bubble>
       </div>
-      <h2 class="aboutMe__headline">Let's work together</h2>
+      <h2 class="aboutMe__headline">{{ "about_me.headline" | translate }}</h2>
       <div class="aboutMe__information-box">
-        <p class="aboutMe__information-box__intro">I am</p>
+        <p class="aboutMe__information-box__intro">
+          {{ "about_me.intro" | translate }}
+        </p>
         <ul class="aboutMe__information-box__details-list">
           <li class="aboutMe__information-box__detail-item">
             <svg class="aboutMe__information-box__detail-icon">
               <use xlink:href="#location-logo"></use>
             </svg>
-            <span class="aboutMe__information-box__detail-text"
-              >located in Munich</span
-            >
+            <span class="aboutMe__information-box__detail-text">{{
+              "about_me.details.location" | translate
+            }}</span>
           </li>
           <li class="aboutMe__information-box__detail-item">
             <svg class="aboutMe__information-box__detail-icon2">
               <use xlink:href="#pc-icon"></use>
             </svg>
-            <span class="aboutMe__information-box__detail-text"
-              >open to Work Remote</span
-            >
+            <span class="aboutMe__information-box__detail-text">{{
+              "about_me.details.remote" | translate
+            }}</span>
           </li>
           <li class="aboutMe__information-box__detail-item">
             <svg class="aboutMe__information-box__detail-icon3">
               <use xlink:href="#bag-icon"></use>
             </svg>
-            <span class="aboutMe__information-box__detail-text"
-              >open to relocate</span
-            >
+            <span class="aboutMe__information-box__detail-text">{{
+              "about_me.details.relocate" | translate
+            }}</span>
           </li>
         </ul>
       </div>
       <div class="aboutMe__passion">
         <p class="aboutMe__passion-text">
-          Write some information about yourself that is IT related. Why are you
-          passionate about programming? What is your source of inspiration for
-          improving your coding skills? Show a desire to learn new technologies.
+          {{ "about_me.passion.text" | translate }}
         </p>
       </div>
 
       <div class="aboutMe__strengths">
         <p class="aboutMe__strengths-text">
-          Describe your approach to problem solving. Do you learn from each
-          challenge to find the most efficient or elegant solution? You can
-          include some key attributes such as: analytical thinking, creativity,
-          persistence and collaboration.
+          {{ "about_me.strengths.text" | translate }}
         </p>
       </div>
       <app-custom-button
@@ -68,7 +65,7 @@
         color="primary"
         class="aboutMe__cta-button"
       >
-        Send a Message
+        {{ "about_me.cta_button" | translate }}
       </app-custom-button>
     </div>
   </div>

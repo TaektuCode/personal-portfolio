@@ -1,10 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core'; // OnDestroy für Best Practice
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { ReviewCardComponent } from './review-card/review-card.component';
-import { Subscription } from 'rxjs'; // Für das Abmelden der Subscription
+import { Subscription } from 'rxjs';
+import { TranslatePipe } from '@ngx-translate/core';
 
-// Interface für die Struktur der Daten in Ihrer reviews.json
 export interface ReviewData {
   id: number | string;
   reviewerName: string;
@@ -15,17 +15,14 @@ export interface ReviewData {
 @Component({
   selector: 'app-review-section',
   standalone: true,
-  imports: [
-    ReviewCardComponent, // Nur die tatsächlich im Template verwendeten Komponenten/Pipes/Direktiven
-  ],
+  imports: [ReviewCardComponent, TranslatePipe],
   templateUrl: './review-section.component.html',
   styleUrls: ['./review-section.component.scss'],
 })
 export class ReviewSectionComponent implements OnInit, OnDestroy {
   public reviews: ReviewData[] = [];
   private reviewsDataUrl = 'assets/data/reviews.json';
-  private reviewsSubscription!: Subscription; // Zum Speichern der Subscription
-
+  private reviewsSubscription!: Subscription;
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -38,17 +35,13 @@ export class ReviewSectionComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (data) => {
           this.reviews = data;
-          console.log('Review-Daten (mit Schlüsseln) geladen:', this.reviews);
-        },
-        error: (error) => {
-          console.error('Fehler beim Laden der Review-Daten:', error);
         },
       });
   }
 
   ngOnDestroy(): void {
     if (this.reviewsSubscription) {
-      this.reviewsSubscription.unsubscribe(); // Von der HTTP-Subscription abmelden
+      this.reviewsSubscription.unsubscribe();
     }
   }
 }

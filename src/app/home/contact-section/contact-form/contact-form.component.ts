@@ -9,7 +9,6 @@ import { CustomButtonComponent } from '../../../shared/ui-elements/custom-button
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
-// NEU: Imports für EmailJS und die korrigierte Umgebung
 import emailjs from '@emailjs/browser';
 import { environment } from '../../../../environments/environment';
 import { RouterLink } from '@angular/router';
@@ -23,14 +22,13 @@ import { RouterLink } from '@angular/router';
     CustomButtonComponent,
     TranslatePipe,
     TranslateDirective,
-    CommonModule, // Notwendig für die @if-Struktur mit den Fehler-Gettern
+    CommonModule,
   ],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
   contactForm!: FormGroup;
-  // Eigenschaft für den Ladezustand des Buttons
   isSubmitting = false;
 
   constructor(private fb: FormBuilder) {}
@@ -44,7 +42,6 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  // --- Ihre Getter (sind perfekt so) ---
   get name() {
     return this.contactForm.get('name');
   }
@@ -58,49 +55,47 @@ export class ContactFormComponent implements OnInit {
     return this.contactForm.get('privacy');
   }
   public get showNameRequiredError(): boolean {
-    /* ... */ return !!(
+    return !!(
       this.name?.invalid &&
       (this.name?.dirty || this.name?.touched) &&
       this.name.errors?.['required']
     );
   }
   public get showEmailRequiredError(): boolean {
-    /* ... */ return !!(
+    return !!(
       this.email?.invalid &&
       (this.email?.dirty || this.email?.touched) &&
       this.email.errors?.['required']
     );
   }
   public get showEmailInvalidError(): boolean {
-    /* ... */ return !!(
+    return !!(
       this.email?.invalid &&
       (this.email?.dirty || this.email?.touched) &&
       this.email.errors?.['email']
     );
   }
   public get showMessageRequiredError(): boolean {
-    /* ... */ return !!(
+    return !!(
       this.message?.invalid &&
       (this.message?.dirty || this.message?.touched) &&
       this.message.errors?.['required']
     );
   }
   public get showMessageMinLengthError(): boolean {
-    /* ... */ return !!(
+    return !!(
       this.message?.invalid &&
       (this.message?.dirty || this.message?.touched) &&
       this.message.errors?.['minlength']
     );
   }
   public get showPrivacyError(): boolean {
-    /* ... */ return !!(this.privacy?.invalid && this.privacy?.touched);
+    return !!(this.privacy?.invalid && this.privacy?.touched);
   }
   public get messageRequiredLength(): number {
     return this.message?.errors?.['minlength']?.requiredLength || 0;
   }
-  // ------------------------------------
 
-  // === ANGEPASSTE onSubmit-METHODE ===
   onSubmit(): void {
     if (this.contactForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;

@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   height: 100dvh;
+  overflow: hidden; // << HIER IST DIE LÖSUNG
 
   &__bubble-element {
     position: absolute;
@@ -29,7 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(-14vh);
+    transform: translateY(-18vh);
   }
 
   &__headline-group {
@@ -53,11 +54,11 @@
 
   &__title-line {
     &--top {
-      font-size: clamp(5rem, 2rem + 12vw, $font-size-h1);
+      font-size: clamp(4.5rem, 2rem + 11vw, 8rem);
     }
 
     &--bottom {
-      font-size: clamp(4.5rem, 2.5rem + 9.25vw, 6.7rem);
+      font-size: clamp(4.5rem, 2.5rem + 8.25vw, 7.45rem);
       margin-top: -6vh;
     }
   }
@@ -67,14 +68,14 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: clamp(400px, 45vw, 600px);
 
-    width: clamp(100%, 40vw, 240px);
-    height: auto;
+    aspect-ratio: 1 / 1;
   }
   &__scroll-down {
     position: absolute;
     bottom: 0;
-    right: 2.5rem;
+    right: clamp(2.5rem, 2vw, 4.5rem);
     display: flex;
     z-index: 4;
     align-items: center;
