@@ -14,16 +14,36 @@
   <nav class="menu-dialog__navigation">
     <ul class="menu-dialog__item-list">
       <li class="menu-dialog__item">
-        <a class="menu-dialog__link" href="#">{{ "nav.link_1" | translate }}</a>
+        <a
+          class="menu-dialog__link"
+          href="#about-me"
+          (click)="onCloseButtonClick()"
+          >{{ "nav.link_1" | translate }}</a
+        >
       </li>
       <li class="menu-dialog__item">
-        <a class="menu-dialog__link" href="#">{{ "nav.link_2" | translate }}</a>
+        <a
+          class="menu-dialog__link"
+          href="#skills"
+          (click)="onCloseButtonClick()"
+          >{{ "nav.link_2" | translate }}</a
+        >
       </li>
       <li class="menu-dialog__item">
-        <a class="menu-dialog__link" href="#">{{ "nav.link_3" | translate }}</a>
+        <a
+          class="menu-dialog__link"
+          href="#my-work"
+          (click)="onCloseButtonClick()"
+          >{{ "nav.link_3" | translate }}</a
+        >
       </li>
       <li class="menu-dialog__item">
-        <a class="menu-dialog__link" href="#">{{ "nav.link_4" | translate }}</a>
+        <a
+          class="menu-dialog__link"
+          href="#contact"
+          (click)="onCloseButtonClick()"
+          >{{ "nav.link_4" | translate }}</a
+        >
       </li>
       <li class="menu-dialog__item menu-dialog__language-switcher">
         <span
