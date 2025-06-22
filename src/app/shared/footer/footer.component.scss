@@ -1,5 +1,13 @@
 @use "../../../styles" as *;
 
+.background {
+  background: linear-gradient(
+    120deg,
+    $brand-primary 0%,
+    $brand-primary-gradient 90%
+  );
+}
+
 .site-footer {
   height: 32rem;
   display: flex;
@@ -7,7 +15,7 @@
   align-items: center;
   position: relative;
   &__logo-icon {
-    fill: $brand-primary;
+    fill: $on-brand-primary;
   }
   &__content {
     display: flex;
@@ -20,6 +28,7 @@
     font-family: $font-montserrat;
     font-size: clamp(1.8rem, 1.7rem + 1vw, $font-size-subtitle);
     margin-bottom: 2rem;
+    color: $on-brand-primary;
   }
   &__copyright-name {
     padding: 0 1rem 0 0.5rem;
@@ -32,9 +41,11 @@
   &__social-icon {
     height: 30px;
     width: 30px;
+    fill: $on-brand-primary;
   }
   &__legal-notice {
     margin-top: 2rem;
+    color: $on-brand-primary;
   }
   &__legal-link {
     font-family: $font-poppins;

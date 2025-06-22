@@ -6,6 +6,7 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  padding-bottom: 20rem;
 
   &__field-group {
     position: relative;
@@ -43,7 +44,6 @@
     font-family: $font-poppins;
     font-size: 1.6rem;
     color: $text-body;
-    background-color: $on-brand-primary;
     padding: 0 0.4rem;
     &--textarea {
       position: absolute;
@@ -55,7 +55,6 @@
       font-family: $font-poppins;
       font-size: 1.6rem;
       color: $text-body;
-      background-color: $on-brand-primary;
       padding: 0 0.4rem;
     }
   }
