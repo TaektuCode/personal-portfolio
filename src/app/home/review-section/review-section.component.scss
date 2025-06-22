@@ -13,8 +13,8 @@
   flex-direction: column;
   justify-content: flex-start;
   height: auto;
-  padding-bottom: 4rem; // Vertikales Padding, unten weniger, da keine Swiper Controls mehr
   position: relative;
+  padding: 0rem 2rem 4rem 2rem;
 
   &__headline {
     font-family: $font-baloo;

@@ -1,39 +1,41 @@
-<div class="hero background">
-  <div class="hero__bubble-element">
-    <app-bubble
-      top="-5vw"
-      left="-56vw"
-      width="155vw"
-      height="155vw"
-    ></app-bubble>
-  </div>
-  <img
-    class="hero__profile-image"
-    [src]="profileImagePath"
-    [alt]="profileImageAltText"
-  />
-  <div class="hero__scroll-down">
-    <span class="hero__scroll-down--text">Scroll down</span>
-    <svg class="hero__scroll-down--icon">
-      <use xlink:href="#downArrow-icon"></use>
-    </svg>
-  </div>
-
+<div class="background">
   <div class="content-wrapper">
-    <header class="hero__text-content">
-      <div class="hero__headline-group">
-        <span class="hero__subtitle">{{
-          "hero.headline-sub" | translate : { name }
-        }}</span>
-        <h1 class="hero__title">
-          <span class="hero__title-line hero__title-line--top">{{
-            "hero.headline_top" | translate
-          }}</span>
-          <span class="hero__title-line hero__title-line--bottom">{{
-            "hero.headline_bottom" | translate
-          }}</span>
-        </h1>
+    <div class="hero">
+      <div class="hero__bubble-element">
+        <app-bubble
+          top="-15vw"
+          left="-56vw"
+          width="155vw"
+          height="175vw"
+        ></app-bubble>
       </div>
-    </header>
+      <img
+        class="hero__profile-image"
+        [src]="profileImagePath"
+        [alt]="profileImageAltText"
+      />
+      <div class="hero__scroll-down">
+        <span class="hero__scroll-down--text">Scroll down</span>
+        <svg class="hero__scroll-down--icon">
+          <use xlink:href="#downArrow-icon"></use>
+        </svg>
+      </div>
+
+      <header class="hero__text-content">
+        <div class="hero__headline-group">
+          <span class="hero__subtitle">{{
+            "hero.headline-sub" | translate : { name }
+          }}</span>
+          <h1 class="hero__title">
+            <span class="hero__title-line hero__title-line--top">{{
+              "hero.headline_top" | translate
+            }}</span>
+            <span class="hero__title-line hero__title-line--bottom">{{
+              "hero.headline_bottom" | translate
+            }}</span>
+          </h1>
+        </div>
+      </header>
+    </div>
   </div>
 </div>

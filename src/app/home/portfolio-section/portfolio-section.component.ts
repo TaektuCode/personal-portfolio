@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ProjectViewComponent } from './project-view/project-view.component';
+import { BubbleComponent } from '../../shared/ui-elements/bubble/bubble.component';
 
 export interface Project {
   id: number | string;
@@ -16,7 +17,7 @@ export interface Project {
 @Component({
   selector: 'app-portfolio-section',
   standalone: true,
-  imports: [TranslatePipe, ProjectViewComponent],
+  imports: [TranslatePipe, ProjectViewComponent, BubbleComponent],
   templateUrl: './portfolio-section.component.html',
   styleUrls: ['./portfolio-section.component.scss'],
 })

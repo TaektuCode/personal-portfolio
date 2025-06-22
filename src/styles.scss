@@ -33,7 +33,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  position: relative;
+  // position: relative;
 }
 
 // CONTENT LIMITATION //
@@ -44,7 +44,8 @@ html {
 .content-wrapper {
   margin: 0 auto;
   max-width: 1920px;
-  padding: 0 2rem;
+  // padding: 0 2rem;
+  overflow-x: hidden;
 }
 
 //FONTS//

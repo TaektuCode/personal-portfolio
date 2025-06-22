@@ -14,14 +14,14 @@
   align-items: center;
   justify-content: center;
   height: 100dvh;
-  overflow: hidden; // << HIER IST DIE LÖSUNG
+  overflow: hidden;
+  position: relative;
+  padding: 0rem 2rem;
 
   &__bubble-element {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 1;
   }
 
