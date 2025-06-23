@@ -32,6 +32,15 @@
       <div class="contact__form-wrapper">
         <app-contact-form></app-contact-form>
       </div>
+      <button
+        class="contact__scroll-top-button"
+        (click)="scrollToTop()"
+        aria-label="Scroll up"
+      >
+        <svg class="contact__scroll-top-icon" aria-hidden="true">
+          <use href="#downArrow-icon"></use>
+        </svg>
+      </button>
     </section>
   </div>
 </div>

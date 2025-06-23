@@ -59,4 +59,35 @@
       white-space: nowrap;
     }
   }
+
+  &__scroll-top-button {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 1000;
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: $brand-primary;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease-in-out;
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  &__scroll-top-icon {
+    width: 2.9rem;
+    height: 2.9rem;
+    fill: $on-brand-primary;
+    rotate: 180deg;
+  }
 }
