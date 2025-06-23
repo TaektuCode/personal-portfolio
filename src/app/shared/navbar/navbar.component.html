@@ -14,6 +14,44 @@
           <use xlink:href="#icon-burger-menu"></use>
         </svg>
       </div>
+
+      <ul class="site-nav__desktop-menu">
+        <li class="site-nav__desktop-item">
+          <a class="site-nav__desktop-link" href="#about-me">{{
+            "nav.link_1" | translate
+          }}</a>
+        </li>
+        <li class="site-nav__desktop-item">
+          <a class="site-nav__desktop-link" href="#skills">{{
+            "nav.link_2" | translate
+          }}</a>
+        </li>
+        <li class="site-nav__desktop-item">
+          <a class="site-nav__desktop-link" href="#my-work">{{
+            "nav.link_3" | translate
+          }}</a>
+        </li>
+        <li class="site-nav__desktop-item">
+          <a class="site-nav__desktop-link" href="#contact">{{
+            "nav.link_4" | translate
+          }}</a>
+        </li>
+        <li class="site-nav__desktop-item site-nav__language-switcher">
+          <span
+            class="site-nav__language-option"
+            (click)="changeLanguage('de')"
+            [class.active]="isLanguageActive('de')"
+            >DE</span
+          >
+          <span class="site-nav__language-separator">/</span>
+          <span
+            class="site-nav__language-option"
+            (click)="changeLanguage('en')"
+            [class.active]="isLanguageActive('en')"
+            >EN</span
+          >
+        </li>
+      </ul>
     </nav>
 
     @if (isDialogVisible) {
