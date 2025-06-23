@@ -73,6 +73,56 @@
   }
 
   &__button-link {
-    text-decoration: none; // Entfernt die Unterstreichung des Links um den Button
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-view {
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 12.5rem;
+    &__image-container {
+      width: 50%;
+    }
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    &__content {
+      padding: 0;
+      width: 50%;
+      align-items: flex-start;
+    }
+    &__name {
+      font-size: clamp(2.2rem, 2.4rem + 2vw, 6rem);
+    }
+    &__tech-item {
+      font-family: $font-montserrat;
+      font-size: 3rem;
+      color: $brand-primary;
+    }
+
+    &__description {
+      text-align: start;
+      font-size: clamp(1.2rem, 1.3rem + 1vw, 2.5rem);
+    }
+
+    &--reversed {
+      flex-direction: row-reverse;
+
+      .project-view__content {
+        align-items: flex-end;
+      }
+      .project-view__description {
+        text-align: right;
+      }
+      .project-view__actions {
+        flex-direction: row-reverse;
+      }
+    }
   }
 }

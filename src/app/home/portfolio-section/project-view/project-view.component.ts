@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 
 import { TranslatePipe } from '@ngx-translate/core';
 import { CustomButtonComponent } from '../../../shared/ui-elements/custom-button/custom-button.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-project-view',
   standalone: true,
-  imports: [TranslatePipe, CustomButtonComponent],
+  imports: [TranslatePipe, CustomButtonComponent, CommonModule],
   templateUrl: './project-view.component.html',
   styleUrls: ['./project-view.component.scss'],
 })
@@ -17,4 +18,6 @@ export class ProjectViewComponent {
   @Input({ required: true }) technologies!: string[];
   @Input({ required: true }) liveUrl!: string;
   @Input({ required: true }) githubUrl!: string;
+
+  @Input() reverseLayout = false;
 }

@@ -1,4 +1,7 @@
-<div class="project-view">
+<div
+  class="project-view"
+  [ngClass]="{ 'project-view--reversed': reverseLayout }"
+>
   <div class="project-view__image-container">
     <img
       [src]="imageUrl"

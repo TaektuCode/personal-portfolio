@@ -2,36 +2,19 @@
   <div class="content-wrapper">
     <div class="portfolio">
       <div class="portfolio__bubble-element1">
-        <app-bubble
-          width="clamp(4.5rem, 10vw, 9rem)"
-          height="clamp(4.5rem, 10vw, 9rem)"
-          top=""
-          left=""
-        ></app-bubble>
+        <app-bubble></app-bubble>
       </div>
       <div class="portfolio__bubble-element2">
-        <app-bubble
-          width="clamp(4.5rem, 57vw, 100rem)"
-          height="clamp(4.5rem, 54vw, 100rem)"
-          top=""
-          left=""
-        ></app-bubble>
+        <app-bubble></app-bubble>
       </div>
       <div class="portfolio__bubble-element3">
-        <app-bubble
-          width="clamp(4.5rem, 57vw, 100rem)"
-          height="clamp(4.5rem, 52vw, 100rem)"
-          top=""
-          left=""
-        ></app-bubble>
+        <app-bubble></app-bubble>
       </div>
       <div class="portfolio__bubble-element4">
-        <app-bubble
-          width="clamp(4.5rem, 35vw, 100rem)"
-          height="clamp(4.5rem, 32.5vw, 100rem)"
-          top=""
-          left=""
-        ></app-bubble>
+        <app-bubble></app-bubble>
+      </div>
+      <div class="portfolio__bubble-element5">
+        <app-bubble></app-bubble>
       </div>
       <header class="portfolio__header">
         <h2 class="portfolio__header--headline">
@@ -43,8 +26,8 @@
       </header>
 
       <div class="portfolio__projects">
-        @if (projects.length > 0) { @for (project of projects; track project.id)
-        {
+        @if (projects.length > 0) { @for (project of projects; track project.id;
+        let i = $index) {
         <app-project-view
           [nameKey]="project.nameKey"
           [descriptionKey]="project.descriptionKey"
@@ -52,6 +35,7 @@
           [technologies]="project.technologies"
           [liveUrl]="project.liveUrl"
           [githubUrl]="project.githubUrl"
+          [reverseLayout]="i % 2 !== 0"
         ></app-project-view>
         } }
       </div>
