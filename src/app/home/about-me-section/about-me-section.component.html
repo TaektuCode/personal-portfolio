@@ -2,73 +2,74 @@
   <div class="content-wrapper">
     <div class="aboutMe">
       <div class="aboutMe__bubble-element1">
-        <app-bubble
-          top="-9rem"
-          left="-7.53rem"
-          width="15.6rem"
-          height="15.6rem"
-        ></app-bubble>
+        <app-bubble></app-bubble>
       </div>
       <div class="aboutMe__bubble-element2">
-        <app-bubble
-          top="3.5rem"
-          left=""
-          width="6.1rem"
-          height="6.2rem"
-        ></app-bubble>
-      </div>
-      <h2 class="aboutMe__headline">{{ "about_me.headline" | translate }}</h2>
-      <div class="aboutMe__information-box">
-        <p class="aboutMe__information-box__intro">
-          {{ "about_me.intro" | translate }}
-        </p>
-        <ul class="aboutMe__information-box__details-list">
-          <li class="aboutMe__information-box__detail-item">
-            <svg class="aboutMe__information-box__detail-icon">
-              <use xlink:href="#location-logo"></use>
-            </svg>
-            <span class="aboutMe__information-box__detail-text">{{
-              "about_me.details.location" | translate
-            }}</span>
-          </li>
-          <li class="aboutMe__information-box__detail-item">
-            <svg class="aboutMe__information-box__detail-icon2">
-              <use xlink:href="#pc-icon"></use>
-            </svg>
-            <span class="aboutMe__information-box__detail-text">{{
-              "about_me.details.remote" | translate
-            }}</span>
-          </li>
-          <li class="aboutMe__information-box__detail-item">
-            <svg class="aboutMe__information-box__detail-icon3">
-              <use xlink:href="#bag-icon"></use>
-            </svg>
-            <span class="aboutMe__information-box__detail-text">{{
-              "about_me.details.relocate" | translate
-            }}</span>
-          </li>
-        </ul>
-      </div>
-      <div class="aboutMe__passion">
-        <p class="aboutMe__passion-text">
-          {{ "about_me.passion.text" | translate }}
-        </p>
+        <app-bubble></app-bubble>
       </div>
 
-      <div class="aboutMe__strengths">
-        <p class="aboutMe__strengths-text">
-          {{ "about_me.strengths.text" | translate }}
-        </p>
+      <div class="aboutMe__main-content">
+        <div class="aboutMe__left-column">
+          <h2 class="aboutMe__headline">
+            {{ "about_me.headline" | translate }}
+          </h2>
+          <div class="aboutMe__information-box">
+            <p class="aboutMe__information-box__intro">
+              {{ "about_me.intro" | translate }}
+            </p>
+            <ul class="aboutMe__information-box__details-list">
+              <li class="aboutMe__information-box__detail-item">
+                <svg class="aboutMe__information-box__detail-icon">
+                  <use xlink:href="#location-logo"></use>
+                </svg>
+                <span class="aboutMe__information-box__detail-text">{{
+                  "about_me.details.location" | translate
+                }}</span>
+              </li>
+              <li class="aboutMe__information-box__detail-item">
+                <svg class="aboutMe__information-box__detail-icon2">
+                  <use xlink:href="#pc-icon"></use>
+                </svg>
+                <span class="aboutMe__information-box__detail-text">{{
+                  "about_me.details.remote" | translate
+                }}</span>
+              </li>
+              <li class="aboutMe__information-box__detail-item">
+                <svg class="aboutMe__information-box__detail-icon3">
+                  <use xlink:href="#bag-icon"></use>
+                </svg>
+                <span class="aboutMe__information-box__detail-text">{{
+                  "about_me.details.relocate" | translate
+                }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="aboutMe__right-column">
+          <div class="aboutMe__passion">
+            <p class="aboutMe__passion-text">
+              {{ "about_me.passion.text" | translate }}
+            </p>
+          </div>
+
+          <div class="aboutMe__strengths">
+            <p class="aboutMe__strengths-text">
+              {{ "about_me.strengths.text" | translate }}
+            </p>
+          </div>
+
+          <a href="#contact" class="aboutMe__cta-link">
+            <app-custom-button
+              size="large"
+              color="primary"
+              class="aboutMe__cta-button"
+            >
+              {{ "about_me.cta_button" | translate }}
+            </app-custom-button>
+          </a>
+        </div>
       </div>
-      <a href="#contact" class="aboutMe__cta-link">
-        <app-custom-button
-          size="large"
-          color="primary"
-          class="aboutMe__cta-button"
-        >
-          {{ "about_me.cta_button" | translate }}
-        </app-custom-button>
-      </a>
     </div>
   </div>
 </div>

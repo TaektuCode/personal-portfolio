@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: $on-brand-primary;
-  padding: 0rem 2rem;
+  padding: 11rem 2rem;
   position: relative;
+  overflow: hidden;
 
   &__bubble-element1 {
     position: absolute;
@@ -16,12 +16,20 @@
     transform: translateY(-50%);
     width: 15rem;
     z-index: 1;
+    --bubble-width: 15.6rem;
+    --bubble-height: 15.6rem;
+    --bubble-top: -9rem;
+    --bubble-left: -7.53rem;
   }
   &__bubble-element2 {
     position: absolute;
     z-index: 1;
     top: 0;
     right: 7.5rem;
+    --bubble-width: 6.1rem;
+    --bubble-height: 6.2rem;
+    --bubble-top: 3.5rem;
+    --bubble-left: 0;
   }
   &__headline {
     z-index: 3;
@@ -30,15 +38,33 @@
     font-family: $font-baloo, sans;
     font-size: clamp(4.7rem, 3.4rem + 4vw, 5.3rem);
     color: $brand-primary;
-    margin: 15rem auto 5rem auto;
+    margin: 0 auto 5rem auto;
     line-height: 120%;
   }
+
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+  }
+
+  &__left-column,
+  &__right-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__information-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3.2rem;
-    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 40rem;
 
     &__intro {
       color: $brand-primary;
@@ -74,7 +100,6 @@
       width: 3.25rem;
       height: 4rem;
     }
-
     &__detail-icon2 {
       width: 4.2rem;
       height: 4.485rem;
@@ -92,29 +117,125 @@
     }
   }
 
-  &__passion {
-    width: 100%;
-    margin-bottom: 3.2rem;
-    &-text {
-      color: $text-body;
-      font-family: $font-montserrat;
-      font-size: clamp(1.8rem, 1.5rem + 1vw, 2.25rem);
-      line-height: 120%;
-    }
-  }
-
+  &__passion,
   &__strengths {
     width: 100%;
-    margin-bottom: 4rem;
-    &-text {
-      color: $text-body;
-      font-family: $font-montserrat;
-      font-size: clamp(1.8rem, 1.5rem + 1vw, 2.25rem);
-      line-height: 120%;
-    }
+    max-width: 50rem;
+    margin-bottom: 3.2rem;
   }
 
-  &__cta-button {
-    margin-bottom: 11rem;
+  &__passion-text,
+  &__strengths-text {
+    color: $text-body;
+    font-family: $font-montserrat;
+    font-size: clamp(1.8rem, 1.5rem + 1vw, 2.25rem);
+    line-height: 120%;
+  }
+
+  &__cta-link {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .aboutMe {
+    padding: 15rem 4rem;
+
+    &__bubble-element1 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateY(-50%);
+      width: 15rem;
+      z-index: 1;
+      --bubble-width: 17.6rem;
+      --bubble-height: 17.6rem;
+      --bubble-top: -9rem;
+      --bubble-left: -15rem;
+    }
+    &__bubble-element2 {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 25.5rem;
+      --bubble-width: 6.1rem;
+      --bubble-height: 6.2rem;
+      --bubble-top: 3.5rem;
+      --bubble-left: 0;
+    }
+
+    &__main-content {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 4rem;
+    }
+
+    &__left-column {
+      flex: 1;
+      align-items: flex-start;
+      padding: 0 5rem;
+    }
+
+    &__headline {
+      margin-bottom: 8rem;
+      font-size: clamp(7.5rem, 5rem + 2vw, 10.1rem);
+      text-align: left;
+    }
+
+    &__information-box {
+      margin-bottom: 0;
+      align-items: center;
+
+      max-width: none;
+      &__intro {
+        text-align: center;
+      }
+      &__details-list {
+        flex-direction: row;
+        gap: 1rem;
+      }
+      &__detail-icon {
+        width: 4rem;
+        height: 4rem;
+      }
+      &__detail-icon2 {
+        width: 7rem;
+        height: 7rem;
+      }
+      &__detail-icon3 {
+        width: 4rem;
+        height: 4rem;
+      }
+      &__detail-text {
+        font-size: clamp(1.4rem, 1rem + 0.5vw, 1.8rem);
+      }
+    }
+
+    &__right-column {
+      flex: 1.5;
+      align-items: flex-start;
+      gap: 3.2rem;
+    }
+
+    &__passion,
+    &__strengths {
+      text-align: left;
+      max-width: none;
+      margin-bottom: 0;
+    }
+
+    &__passion-text {
+      font-size: clamp(1.8rem, 0.75rem + 1.1vw, 2.25rem);
+    }
+
+    &__strengths-text {
+      font-size: clamp(1.8rem, 0.75rem + 1.1vw, 2.25rem);
+    }
+
+    &__cta-link {
+      align-self: flex-start;
+      margin-top: 2rem;
+    }
   }
 }

@@ -121,8 +121,8 @@
     &__bubble-element {
       --bubble-width: clamp(60vw, 70vw, 75vw);
       --bubble-height: 90vh;
-      --bubble-top: -10rem; // Angepasste Position
-      --bubble-left: -30rem; // Angepasste Position
+      --bubble-top: -10rem;
+      --bubble-left: -30rem;
     }
 
     &__profile-image {
