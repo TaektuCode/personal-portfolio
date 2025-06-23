@@ -9,4 +9,9 @@
     $brand-primary-gradient 80%
   );
   border-radius: 50%;
+
+  width: var(--bubble-width, 10rem);
+  height: var(--bubble-height, 10rem);
+  top: var(--bubble-top, 0);
+  left: var(--bubble-left, 0);
 }

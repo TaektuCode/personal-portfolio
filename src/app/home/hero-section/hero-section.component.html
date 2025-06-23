@@ -2,40 +2,84 @@
   <div class="content-wrapper">
     <div class="hero">
       <div class="hero__bubble-element">
-        <app-bubble
-          top="-15vw"
-          left="-56vw"
-          width="155vw"
-          height="175vw"
-        ></app-bubble>
+        <app-bubble></app-bubble>
       </div>
+
       <img
         class="hero__profile-image"
         [src]="profileImagePath"
         [alt]="profileImageAltText"
       />
-      <div class="hero__scroll-down">
-        <span class="hero__scroll-down--text">Scroll down</span>
-        <svg class="hero__scroll-down--icon">
-          <use xlink:href="#downArrow-icon"></use>
-        </svg>
-      </div>
 
-      <header class="hero__text-content">
-        <div class="hero__headline-group">
-          <span class="hero__subtitle">{{
-            "hero.headline-sub" | translate : { name }
-          }}</span>
-          <h1 class="hero__title">
-            <span class="hero__title-line hero__title-line--top">{{
-              "hero.headline_top" | translate
+      <div class="hero__right-column">
+        <header class="hero__text-content">
+          <div class="hero__headline-group">
+            <span class="hero__subtitle">{{
+              "hero.headline-sub" | translate : { name }
             }}</span>
-            <span class="hero__title-line hero__title-line--bottom">{{
-              "hero.headline_bottom" | translate
-            }}</span>
-          </h1>
+            <h1 class="hero__title">
+              <span class="hero__title-line hero__title-line--top">{{
+                "hero.headline_top" | translate
+              }}</span>
+              <span class="hero__title-line hero__title-line--bottom">{{
+                "hero.headline_bottom" | translate
+              }}</span>
+            </h1>
+          </div>
+        </header>
+
+        <div class="hero__scroll-down">
+          <span class="hero__scroll-down--text">Scroll down</span>
+          <svg class="hero__scroll-down--icon">
+            <use xlink:href="#downArrow-icon"></use>
+          </svg>
         </div>
-      </header>
+        <div class="hero__desktop-scroll-indicator">
+          <span class="hero__desktop-scroll-indicator--text">SCROLL</span>
+          <div class="hero__desktop-scroll-indicator--line"></div>
+        </div>
+      </div>
+      <nav class="hero__social-nav" aria-label="Social media links">
+        <ul class="hero__social-list">
+          <li class="hero__social-item">
+            <a
+              href="https://github.com/TaektuCode"
+              class="hero__social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profil"
+            >
+              <svg class="hero__social-icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="hero__social-item">
+            <a
+              href="#contact"
+              class="hero__social-link"
+              aria-label="E-Mail senden"
+            >
+              <svg class="hero__social-icon" aria-hidden="true">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="hero__social-item">
+            <a
+              href="https://www.linkedin.com/in/alex-russotto-7a2r93/"
+              class="hero__social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profil"
+            >
+              <svg class="hero__social-icon" aria-hidden="true">
+                <use xlink:href="#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </div>
