@@ -3,6 +3,7 @@
 .portfolio {
   padding: 0rem 2rem;
   position: relative;
+  overflow: hidden;
   &__bubble-element1 {
     position: absolute;
     width: fit-content;

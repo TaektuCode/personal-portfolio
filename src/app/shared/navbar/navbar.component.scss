@@ -8,130 +8,143 @@
   height: 11rem;
   display: flex;
   justify-content: space-between;
-  padding: 0 2.5rem;
   align-items: center;
+  padding: 0 2.5rem;
   z-index: 1000;
+}
 
-  &__logo-icon {
-    width: 6.4rem;
-    height: 6.4rem;
-    fill: $on-brand-primary;
-    transition: fill 0.3s ease-in-out;
+.site-nav__content-wrapper {
+  display: none;
+}
 
-    &.logo--dark-fill {
-      fill: $brand-primary;
-    }
+.site-nav__logo-icon {
+  width: 6.4rem;
+  height: 6.4rem;
+  fill: $on-brand-primary;
+  transition: fill 0.3s ease-in-out;
+
+  &.logo--dark-fill {
+    fill: $brand-primary;
   }
+}
 
-  &__menu-toggle {
-    cursor: pointer;
-  }
+.site-nav__menu-toggle {
+  cursor: pointer;
+}
 
-  &__menu-toggle-icon {
-    width: 3rem;
-    height: 2.8rem;
-    stroke: $brand-primary;
-  }
+.site-nav__menu-toggle-icon {
+  width: 3rem;
+  height: 2.8rem;
+  stroke: $brand-primary;
+}
 
-  &__desktop-menu {
-    display: none;
-  }
+.site-nav__desktop-menu {
+  display: none;
 }
 
 @media (min-width: 1200px) {
   .site-nav {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .site-nav__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
     padding: 0 4rem;
-    &__menu-toggle {
-      display: none;
+  }
+
+  .site-nav__menu-toggle {
+    display: none;
+  }
+
+  .site-nav__logo-icon {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .site-nav__desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: 5.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav__desktop-link {
+    font-family: $font-montserrat;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: $brand-primary;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    position: relative;
+    transition: color 0.2s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $on-brand-primary;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
     }
 
-    &__logo-icon {
-      width: 14rem;
-      height: 14rem;
-      fill: $on-brand-primary;
-      transition: fill 0.3s ease-in-out;
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+
+  .site-nav__language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+
+  .site-nav__language-option {
+    position: relative;
+    cursor: pointer;
+    font-family: $font-montserrat;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: rgba($brand-primary, 0.7);
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $brand-primary;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
     }
 
-    &__desktop-menu {
-      display: flex;
-      align-items: center;
-      gap: 5.5rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    &__desktop-link {
-      font-family: $font-montserrat;
-      font-size: 2.6rem;
-      font-weight: 400;
+    &.active {
+      font-weight: 700;
       color: $brand-primary;
-      text-decoration: none;
-      padding-bottom: 0.5rem;
-      position: relative;
-      transition: color 0.2s ease-in-out;
 
       &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: $on-brand-primary;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      &:hover::after {
         transform: scaleX(1);
       }
     }
+  }
 
-    &__language-switcher {
-      display: flex;
-      align-items: center;
-      margin-left: 1.5rem;
-    }
-
-    &__language-option {
-      position: relative;
-      cursor: pointer;
-      font-family: $font-montserrat;
-      font-size: 2.6rem;
-      font-weight: 400;
-      color: rgba($brand-primary, 0.7);
-      transition: color 0.2s ease, font-weight 0.2s ease;
-      padding-bottom: 0.5rem;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background-color: $brand-primary;
-        transform: scaleX(0);
-        transform-origin: center;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      &.active {
-        font-weight: 700;
-        color: $brand-primary;
-
-        &::after {
-          transform: scaleX(1);
-        }
-      }
-    }
-
-    &__language-separator {
-      font-size: 2.6rem;
-      margin: 0 1.5rem;
-      color: rgba($brand-primary, 0.7);
-    }
+  .site-nav__language-separator {
+    font-size: 2.6rem;
+    margin: 0 1.5rem;
+    color: rgba($brand-primary, 0.7);
   }
 }

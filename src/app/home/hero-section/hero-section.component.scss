@@ -43,6 +43,8 @@
   }
 
   &__headline-group {
+    position: relative;
+    z-index: 1000;
     width: 90vw;
     max-width: 37rem;
     color: $on-brand-primary;
@@ -119,7 +121,7 @@
     padding: 0 5rem;
 
     &__bubble-element {
-      --bubble-width: clamp(60vw, 70vw, 75vw);
+      --bubble-width: clamp(60vw, 70vw, 155rem);
       --bubble-height: 90vh;
       --bubble-top: -10rem;
       --bubble-left: -30rem;
@@ -238,6 +240,37 @@
 
       &:hover {
         transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero {
+    &__bubble-element {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      --bubble-width: 40vw;
+      --bubble-height: clamp(30vw, 70rem + 55vw, 150rem);
+      --bubble-top: -10rem;
+      --bubble-left: -40rem;
+    }
+    &__profile-image {
+      position: relative;
+      transform: none;
+      left: 0;
+      order: 1;
+      align-self: flex-end;
+      width: clamp(350px, 40vw, 1000px);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+    &__title-line {
+      &--bottom {
+        margin-top: -4.5vh;
       }
     }
   }
