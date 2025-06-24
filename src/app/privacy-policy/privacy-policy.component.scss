@@ -1,7 +1,7 @@
 @use "../../styles" as *;
 
 .privacy-policy {
-  padding-top: 14.3rem;
+  padding: 14.3rem 2rem 5rem 2rem;
   width: 100%;
   margin: 0 auto;
   color: $text-body;
@@ -77,5 +77,11 @@
     &:hover {
       color: darken($brand-primary, 10%);
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .privacy-policy {
+    padding: 14.3rem 4rem 5rem 4rem;
   }
 }

@@ -2,12 +2,14 @@
   <div class="content-wrapper">
     <nav class="site-nav">
       <div class="site-nav__logo">
-        <svg
-          class="site-nav__logo-icon"
-          [ngClass]="{ 'logo--dark-fill': useAlternateLogoColor }"
-        >
-          <use xlink:href="#icon-my-logo"></use>
-        </svg>
+        <a href="#home" aria-label="Zurück zum Anfang der Seite">
+          <svg
+            class="site-nav__logo-icon"
+            [ngClass]="{ 'logo--dark-fill': useAlternateLogoColor }"
+          >
+            <use xlink:href="#icon-my-logo"></use>
+          </svg>
+        </a>
       </div>
       <div class="site-nav__menu-toggle" (click)="toggleDialog()">
         <svg class="site-nav__menu-toggle-icon">
