@@ -30,6 +30,7 @@ import { RouterLink } from '@angular/router';
 export class ContactFormComponent implements OnInit {
   contactForm!: FormGroup;
   isSubmitting = false;
+  submissionStatus: 'success' | 'error' | null = null;
 
   constructor(private fb: FormBuilder) {}
 
@@ -99,6 +100,7 @@ export class ContactFormComponent implements OnInit {
   onSubmit(): void {
     if (this.contactForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;
+      this.submissionStatus = null;
 
       emailjs
         .send(
@@ -110,16 +112,20 @@ export class ContactFormComponent implements OnInit {
         .then(
           (response) => {
             console.log('SUCCESS!', response.status, response.text);
-            alert('Nachricht erfolgreich gesendet!'); // Hier später ein schöneres Feedback einbauen
+            this.submissionStatus = 'success';
             this.contactForm.reset();
             this.isSubmitting = false;
+            setTimeout(() => {
+              this.submissionStatus = null;
+            }, 3000);
           },
           (error) => {
             console.error('FAILED...', error);
-            alert(
-              'Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.'
-            );
+            this.submissionStatus = 'error';
             this.isSubmitting = false;
+            setTimeout(() => {
+              this.submissionStatus = null;
+            }, 3000);
           }
         );
     } else {

@@ -104,6 +104,10 @@
       "text_part1": "I've read the ",
       "link_text": "privacy policy",
       "text_part2": " and agree to the processing of my data as outlined."
+    },
+    "feedback": {
+      "success": "Your message has been sent successfully. Thank you!",
+      "error": "An error occurred while sending the message. Please try again later."
     }
   },
   "footer": {

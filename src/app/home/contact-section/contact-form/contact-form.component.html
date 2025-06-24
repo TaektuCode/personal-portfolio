@@ -130,4 +130,12 @@
       }
     </app-custom-button>
   </div>
+  @if (submissionStatus) {
+  <div
+    class="contact-form__feedback"
+    [ngClass]="'contact-form__feedback--' + submissionStatus"
+  >
+    <p>{{ "form.feedback." + submissionStatus | translate }}</p>
+  </div>
+  }
 </form>

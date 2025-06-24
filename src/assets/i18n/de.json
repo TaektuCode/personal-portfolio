@@ -104,6 +104,10 @@
       "text_part1": "Ich habe die ",
       "link_text": "Datenschutzerklärung",
       "text_part2": " gelesen und stimme zu."
+    },
+    "feedback": {
+      "success": "Ihre Nachricht wurde erfolgreich gesendet. Vielen Dank!",
+      "error": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
     }
   },
   "footer": {

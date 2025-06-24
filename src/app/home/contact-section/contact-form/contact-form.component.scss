@@ -125,12 +125,11 @@
     }
   }
 
-  // === NEU: Styles für den Privacy-Bereich ===
   &__privacy {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-top: 1rem; // Abstand zum letzten Formularfeld
+    margin-top: 1rem;
   }
 
   &__privacy-control {
@@ -166,8 +165,31 @@
   }
 
   &__actions {
-    margin-top: 2.5rem; // Margin erhöht für mehr Abstand zum Privacy-Hinweis
+    margin-top: 2.5rem;
     display: flex;
     justify-content: center;
+  }
+
+  &__feedback {
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-family: $font-montserrat;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+
+    // Variante für Erfolgsfall
+    &--success {
+      color: #2e7d32; // Dunkles Grün
+    }
+
+    &--error {
+      color: #c62828;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 }
