@@ -74,11 +74,11 @@
   &__profile-image {
     position: absolute;
     z-index: 2;
-    bottom: 0;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     width: clamp(420px, 45vw, 800px);
-    height: 60%;
+    height: auto;
   }
   &__scroll-down {
     position: absolute;
@@ -129,12 +129,11 @@
       position: relative;
       transform: none;
       left: 0;
-      width: clamp(35vw, 45vw, 50vw);
-      height: auto;
-      min-height: 70vh;
-      max-height: 80vh;
       order: 1;
       align-self: flex-end;
+      width: clamp(350px, 40vw, 500px);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
     }
 
     &__right-column {
