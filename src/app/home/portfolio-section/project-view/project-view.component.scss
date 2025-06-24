@@ -91,6 +91,11 @@
       display: block;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     &__content {
       padding: 0;
@@ -98,7 +103,7 @@
       align-items: flex-start;
     }
     &__name {
-      font-size: clamp(2.2rem, 2.4rem + 2vw, 6rem);
+      font-size: clamp(2.2rem, 2.2rem + 2vw, 4rem);
     }
     &__tech-item {
       font-family: $font-montserrat;
@@ -108,7 +113,7 @@
 
     &__description {
       text-align: start;
-      font-size: clamp(1.2rem, 1.3rem + 1vw, 2.5rem);
+      font-size: clamp(1.2rem, 1.3rem + 1vw, 2.25rem);
     }
 
     &--reversed {

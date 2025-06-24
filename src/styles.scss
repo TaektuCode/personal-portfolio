@@ -54,7 +54,7 @@ html {
   src: url("../src/assets/fonts/Baloo-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; // Empfohlen für Performance
+  font-display: swap;
 }
 
 @font-face {
@@ -63,7 +63,7 @@ html {
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
-  font-display: swap; // Empfohlen für Performance
+  font-display: swap;
 }
 
 @font-face {
@@ -71,5 +71,5 @@ html {
   src: url("../src/assets/fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; // Empfohlen für Performance
+  font-display: swap;
 }
