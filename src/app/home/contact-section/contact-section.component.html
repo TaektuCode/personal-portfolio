@@ -1,14 +1,13 @@
 <div class="background">
   <div class="content-wrapper">
     <section class="contact">
-      <div class="contact__bubble-element">
-        <app-bubble
-          top=""
-          left=""
-          width="clamp(5.5rem, 12vw, 12rem)"
-          height="clamp(5.5rem, 12vw, 12rem)"
-        ></app-bubble>
+      <div class="contact__bubble-element1">
+        <app-bubble></app-bubble>
       </div>
+      <div class="contact__bubble-element2">
+        <app-bubble></app-bubble>
+      </div>
+
       <header class="contact__header">
         <h2 class="contact__headline">
           {{ "contact_section.headline" | translate }}
@@ -18,19 +17,22 @@
         </h3>
       </header>
 
-      <div class="contact__cta">
-        <p class="contact__cta-description">
-          {{ "contact_section.description" | translate }}
-        </p>
-        <p class="contact__cta-text">
-          {{ "contact_section.cta_text" | translate }}
-          <span class="contact__cta-highlight">{{
-            "contact_section.cta_highlight" | translate
-          }}</span>
-        </p>
-      </div>
-      <div class="contact__form-wrapper">
-        <app-contact-form></app-contact-form>
+      <div class="contact__main-content">
+        <div class="contact__cta">
+          <p class="contact__cta-description">
+            {{ "contact_section.description" | translate }}
+          </p>
+          <p class="contact__cta-text">
+            {{ "contact_section.cta_text" | translate }}
+            <span class="contact__cta-highlight">{{
+              "contact_section.cta_highlight" | translate
+            }}</span>
+          </p>
+        </div>
+
+        <div class="contact__form-wrapper">
+          <app-contact-form></app-contact-form>
+        </div>
       </div>
       <button
         class="contact__scroll-top-button"

@@ -11,42 +11,69 @@
 .contact {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  padding: 0rem 2rem;
+  padding: 0 2rem 6rem 2rem;
   position: relative;
-  &__bubble-element {
+
+  &__bubble-element1 {
     position: absolute;
     top: 5%;
     right: 35%;
     width: fit-content;
     height: fit-content;
     z-index: 1;
+    --bubble-width: clamp(5.5rem, 12vw, 12rem);
+    --bubble-height: clamp(5.5rem, 12vw, 12rem);
+    --bubble-top: 0;
+    --bubble-left: 0;
   }
+
+  &__bubble-element2 {
+    display: none;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: $brand-primary;
     gap: 1.5rem;
-    margin: 12.5rem 0 2.5rem 0;
+    margin: 12.5rem 0 4rem 0;
     z-index: 2;
   }
+
   &__headline {
     font-family: $font-baloo;
     font-weight: 400;
     font-size: $font-size-h3;
   }
+
   &__subtitle {
     font-family: $font-montserrat;
     font-weight: 700;
     font-size: $font-size-subtitle;
   }
+
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+    z-index: 2;
+  }
+
   &__cta {
     font-size: $font-size-body;
-    z-index: 2;
+    max-width: 55rem;
+
     &-description {
       font-family: $font-montserrat;
       color: $text-body;
       margin-bottom: 2.5rem;
+      text-align: center;
     }
     &-text {
       font-family: $font-poppins;
@@ -60,12 +87,16 @@
     }
   }
 
+  &__form-wrapper {
+    width: 100%;
+    max-width: 60rem;
+  }
+
   &__scroll-top-button {
     position: absolute;
     bottom: 3rem;
     right: 3rem;
     z-index: 1000;
-
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -73,12 +104,11 @@
     border: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: transform 0.2s ease-in-out;
+
     &:active {
       transform: scale(1.1);
     }
@@ -89,5 +119,67 @@
     height: 2.9rem;
     fill: $on-brand-primary;
     rotate: 180deg;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    padding-bottom: 10rem;
+
+    &__bubble-element2 {
+      display: block;
+      position: absolute;
+      top: 75%;
+      right: 82.5%;
+      width: fit-content;
+      height: fit-content;
+      z-index: 1;
+      --bubble-width: clamp(5.5rem, 14vw, 18rem);
+      --bubble-height: clamp(5.5rem, 14vw, 18rem);
+      --bubble-top: 0;
+      --bubble-left: 0;
+    }
+
+    &__header {
+      align-items: flex-start;
+      text-align: left;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 4rem;
+      margin: 12.5rem 0 6rem 0;
+    }
+
+    &__main-content {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 8rem;
+      max-width: 1200px;
+      padding: 0 4rem;
+    }
+
+    &__cta {
+      flex: 1;
+      max-width: none;
+
+      &-description,
+      &-text {
+        text-align: left;
+        margin-top: 2rem;
+        font-size: 2rem;
+      }
+      &-highlight {
+        font-size: 2rem;
+      }
+    }
+
+    &__form-wrapper {
+      flex: 1.2;
+      max-width: none;
+    }
+
+    &__scroll-top-button {
+      right: 4rem;
+      bottom: 4rem;
+    }
   }
 }
