@@ -27,7 +27,6 @@ export class SkillSetSectionComponent implements OnInit {
     this.http.get<Skill[]>(this.skillsDataUrl).subscribe({
       next: (data) => {
         this.skills = data;
-        console.log('Skills erfolgreich geladen:', this.skills);
       },
       error: (error) => {
         console.error('Fehler beim Laden der Skill-Daten:', error);
