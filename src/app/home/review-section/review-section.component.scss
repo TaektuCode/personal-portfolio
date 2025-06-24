@@ -25,7 +25,7 @@
   }
 
   &__subtitle {
-    font-family: $font-montserrat, sans-serif;
+    font-family: $font-montserrat;
     font-size: clamp(1.4rem, 1.4rem + 0.75vw, 1.8rem);
     color: $on-brand-primary;
     font-weight: 400;
@@ -33,7 +33,6 @@
     text-align: center;
   }
 
-  // Styles für den Scroll Snap Container
   &__card-container {
     width: 100vw;
     position: relative;
@@ -60,6 +59,28 @@
 
     &:not(:last-child) {
       margin-right: 15px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .review {
+    padding: 4rem 4rem 7rem 4rem;
+    &__subtitle {
+      font-size: 2.6rem;
+      margin-bottom: 2;
+    }
+
+    &__card-container {
+      max-width: 1200px;
+      scroll-padding: 0 2rem;
+      gap: 2rem;
+    }
+
+    app-review-card {
+      flex-basis: calc((100% - 2 * 3rem) / 3);
+      flex-shrink: 0;
+      scroll-snap-align: start;
     }
   }
 }
