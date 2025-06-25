@@ -3,11 +3,19 @@
   [ngClass]="{ 'project-view--reversed': reverseLayout }"
 >
   <div class="project-view__image-container">
-    <img
-      [src]="imageUrl"
-      [alt]="nameKey | translate"
-      class="project-view__image"
-    />
+    <a
+      [href]="liveUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-view__image-link"
+      [attr.aria-label]="(nameKey | translate) + ' Live-Test'"
+    >
+      <img
+        [src]="imageUrl"
+        [alt]="nameKey | translate"
+        class="project-view__image"
+      />
+    </a>
   </div>
   <div class="project-view__content">
     <h4 class="project-view__name">{{ nameKey | translate }}</h4>

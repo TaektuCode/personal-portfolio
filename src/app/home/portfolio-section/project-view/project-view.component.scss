@@ -5,6 +5,13 @@
   flex-direction: column;
   margin-bottom: 5rem;
   z-index: 3;
+
+  &__image-link {
+    display: block;
+    cursor: default;
+    pointer-events: none;
+  }
+
   &__image {
     width: 100%;
     height: auto;
@@ -85,14 +92,11 @@
     &__image-container {
       width: 50%;
     }
-    &__image {
-      width: 100%;
-      height: auto;
+    &__image-link {
+      pointer-events: auto;
+      cursor: pointer;
       display: block;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
       transition: transform 0.3s ease-in-out;
-
       &:hover {
         transform: scale(1.05);
       }
