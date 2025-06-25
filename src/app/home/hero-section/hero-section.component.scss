@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   padding: 0rem 2rem;
@@ -24,7 +24,7 @@
     left: 0;
     z-index: 1;
 
-    --bubble-width: clamp(60vw, 28rem + 90vw, 290vw);
+    --bubble-width: clamp(60vw, 32rem + 90vw, 290vw);
     --bubble-height: clamp(30vw, 70rem + 55vw, 150rem);
     --bubble-top: -10rem;
     --bubble-left: -28rem;
@@ -133,7 +133,7 @@
       left: 0;
       order: 1;
       align-self: flex-end;
-      width: clamp(350px, 40vw, 500px);
+      width: clamp(350px, 40vw, 525px);
       aspect-ratio: 1 / 1;
       object-fit: cover;
     }
@@ -245,7 +245,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 2500px) {
   .hero {
     &__bubble-element {
       position: absolute;
