@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -27,11 +27,35 @@ export class NavbarComponent implements OnInit, OnDestroy {
   public isDialogVisible = false;
   public isDialogOpen = false;
 
+  public isNavbarVisible = true;
+  public isNavbarScrolled = false;
+  private lastScrollY = 0;
+
   constructor(private router: Router, public translate: TranslateService) {
     this.currentLang = this.translate.currentLang || this.translate.defaultLang;
   }
 
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY === 0) {
+      this.isNavbarVisible = true;
+      this.isNavbarScrolled = false;
+    } else if (currentScrollY > 100) {
+      if (currentScrollY > this.lastScrollY) {
+        this.isNavbarVisible = false;
+      } else {
+        this.isNavbarVisible = true;
+        this.isNavbarScrolled = true;
+      }
+    }
+    this.lastScrollY = currentScrollY;
+  }
+
   ngOnInit(): void {
+    this.onWindowScroll();
+
     this.routerSubscription = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {

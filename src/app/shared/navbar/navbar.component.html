@@ -1,51 +1,58 @@
 <div class="background">
   <div class="content-wrapper">
-    <nav class="site-nav">
-      <div class="site-nav__content-wrapper">
-        <div class="site-nav__logo">
-          <a href="#home" aria-label="Back to homepage">
-            <svg
-              class="site-nav__logo-icon"
-              [ngClass]="{ 'logo--dark-fill': useAlternateLogoColor }"
-            >
-              <use xlink:href="#icon-my-logo"></use>
-            </svg>
-          </a>
-        </div>
-
-        <ul class="site-nav__desktop-menu">
-          <li class="site-nav__desktop-item">
-            <a class="site-nav__desktop-link" href="#about-me">{{
-              "nav.link_1" | translate
-            }}</a>
-          </li>
-          <li class="site-nav__desktop-item">
-            <a class="site-nav__desktop-link" href="#skills">{{
-              "nav.link_2" | translate
-            }}</a>
-          </li>
-          <li class="site-nav__desktop-item">
-            <a class="site-nav__desktop-link" href="#my-work">{{
-              "nav.link_3" | translate
-            }}</a>
-          </li>
-          <li class="site-nav__desktop-item site-nav__language-switcher">
-            <span
-              class="site-nav__language-option"
-              (click)="changeLanguage('de')"
-              [class.active]="isLanguageActive('de')"
-              >DE</span
-            >
-            <span class="site-nav__language-separator">/</span>
-            <span
-              class="site-nav__language-option"
-              (click)="changeLanguage('en')"
-              [class.active]="isLanguageActive('en')"
-              >EN</span
-            >
-          </li>
-        </ul>
+    <nav
+      class="site-nav"
+      [ngClass]="{
+        'site-nav--hidden': !isNavbarVisible,
+        'site-nav--scrolled': isNavbarScrolled
+      }"
+    >
+      <div class="site-nav__logo">
+        <a href="#home" aria-label="Back to homepage">
+          <svg
+            class="site-nav__logo-icon"
+            [ngClass]="{
+              'logo--dark-fill': useAlternateLogoColor || isNavbarScrolled
+            }"
+          >
+            <use xlink:href="#icon-my-logo"></use>
+          </svg>
+        </a>
       </div>
+
+      <ul class="site-nav__desktop-menu">
+        <li class="site-nav__desktop-item">
+          <a class="site-nav__desktop-link" href="#about-me">{{
+            "nav.link_1" | translate
+          }}</a>
+        </li>
+        <li class="site-nav__desktop-item">
+          <a class="site-nav__desktop-link" href="#skills">{{
+            "nav.link_2" | translate
+          }}</a>
+        </li>
+        <li class="site-nav__desktop-item">
+          <a class="site-nav__desktop-link" href="#my-work">{{
+            "nav.link_3" | translate
+          }}</a>
+        </li>
+        <li class="site-nav__desktop-item site-nav__language-switcher">
+          <span
+            class="site-nav__language-option"
+            (click)="changeLanguage('de')"
+            [class.active]="isLanguageActive('de')"
+            >DE</span
+          >
+          <span class="site-nav__language-separator">/</span>
+          <span
+            class="site-nav__language-option"
+            (click)="changeLanguage('en')"
+            [class.active]="isLanguageActive('en')"
+            >EN</span
+          >
+        </li>
+      </ul>
+
       <div class="site-nav__menu-toggle" (click)="toggleDialog()">
         <svg class="site-nav__menu-toggle-icon">
           <use xlink:href="#icon-burger-menu"></use>
