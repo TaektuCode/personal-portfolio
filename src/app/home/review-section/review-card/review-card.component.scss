@@ -3,9 +3,11 @@
 .review-card {
   display: flex;
   flex-direction: column;
-  height: 21.5rem;
+  height: 23.5rem;
   justify-content: center;
   align-items: center;
+  width: 90%;
+
   &__header {
     font-family: $font-montserrat;
     color: $on-brand-primary;
@@ -27,6 +29,7 @@
     font-size: clamp(1.4rem, 1.4rem + 0.5vw, 1.8rem);
     color: $on-brand-primary;
     text-align: center;
+    max-width: 67.5rem;
   }
 }
 

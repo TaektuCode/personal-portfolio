@@ -14,12 +14,12 @@
   align-items: center;
   justify-content: flex-start;
   height: auto;
-  padding: 0rem 2rem;
+  padding: 0rem 2rem 5rem 2rem;
   position: relative;
-  padding-bottom: 5rem;
 
   &__headline {
     padding: 3rem 0;
+    margin-bottom: 2rem;
     font-size: clamp(5.5rem, 3.4rem + 4vw, 6rem);
     font-family: $font-baloo;
     color: $on-brand-primary;
@@ -27,10 +27,11 @@
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2.5rem;
-    width: 80%;
+    width: 100%;
     max-width: 1000px;
     padding: 1rem 0;
   }
@@ -44,6 +45,7 @@
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     transition: transform 0.2s ease-in-out;
+    flex-basis: 80px;
 
     &:hover {
       transform: translateY(-5px);
@@ -73,15 +75,12 @@
     }
 
     &__grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      grid-template-columns: none;
       max-width: 75rem;
     }
 
     &__item {
       flex-basis: 100px;
+
       &__name {
         font-size: 1.8rem;
       }
