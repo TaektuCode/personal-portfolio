@@ -6,6 +6,8 @@
     $brand-primary 0%,
     $brand-primary-gradient 90%
   );
+  position: relative;
+  z-index: 3;
 }
 
 .review {

@@ -3,7 +3,7 @@
 .portfolio {
   padding: 10rem 2rem;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &__bubble-element1 {
     position: absolute;
@@ -90,7 +90,7 @@
 
   @media (min-width: 1200px) {
     padding: 15rem 4rem;
-    overflow-y: hidden;
+    overflow: visible;
 
     &__bubble-element1 {
       position: absolute;
