@@ -1,16 +1,17 @@
 @use "../../../styles" as *;
 
 .portfolio {
-  padding: 0rem 2rem;
+  padding: 10rem 2rem;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+
   &__bubble-element1 {
     position: absolute;
     width: fit-content;
     height: fit-content;
     top: 2%;
     right: 20%;
-
+    z-index: 1;
     --bubble-width: clamp(4.5rem, 10vw, 9rem);
     --bubble-height: clamp(4.5rem, 10vw, 9rem);
     --bubble-top: 0;
@@ -23,31 +24,33 @@
     height: fit-content;
     top: 15.5%;
     left: -35%;
-
+    z-index: 1;
     --bubble-width: clamp(4.5rem, 57vw, 100rem);
     --bubble-height: clamp(4.5rem, 54vw, 100rem);
     --bubble-top: 0;
     --bubble-left: 0;
   }
+
   &__bubble-element3 {
     position: absolute;
     width: fit-content;
     height: fit-content;
     top: 47.5%;
     right: 35%;
-
+    z-index: 1;
     --bubble-width: clamp(4.5rem, 57vw, 100rem);
     --bubble-height: clamp(4.5rem, 52vw, 100rem);
     --bubble-top: 0;
     --bubble-left: 0;
   }
+
   &__bubble-element4 {
     position: absolute;
     width: fit-content;
     height: fit-content;
     top: 73.75%;
     left: -5%;
-
+    z-index: 1;
     --bubble-width: clamp(4.5rem, 35vw, 100rem);
     --bubble-height: clamp(4.5rem, 32.5vw, 100rem);
     --bubble-top: 0;
@@ -57,16 +60,14 @@
   &__bubble-element5 {
     display: none;
   }
-  &__projects {
-    position: relative;
-    z-index: 2;
-  }
+
   &__header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-bottom: 4rem;
-    padding-top: 10rem;
+    position: relative;
     z-index: 2;
 
     &--headline {
@@ -74,17 +75,22 @@
       color: $brand-primary;
       font-size: clamp(4.2rem, 2.8rem + 5vw, 5.3rem);
     }
+
     &--subtitle {
       font-family: $font-montserrat;
       font-weight: 400;
       font-size: clamp(1.4rem, 0.85rem + 2vw, 2rem);
     }
   }
-}
 
-@media (min-width: 1200px) {
-  .portfolio {
-    padding: 0rem 4rem;
+  &__projects {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 15rem 4rem;
+    overflow-y: hidden;
 
     &__bubble-element1 {
       position: absolute;
@@ -125,23 +131,16 @@
     }
 
     &__header {
-      display: flex;
-      flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 4rem;
-      padding-top: 10rem;
-      z-index: 2;
+      text-align: left;
+      margin-bottom: 8rem;
       width: 50%;
-      &--headline {
-        font-family: $font-baloo;
-        color: $brand-primary;
-        font-size: 8rem;
-      }
-      &--subtitle {
-        font-family: $font-montserrat;
-        font-weight: 400;
-        font-size: 2.5rem;
-      }
+    }
+
+    &__projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12.5rem;
     }
   }
 }

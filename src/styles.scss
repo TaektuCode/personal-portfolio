@@ -1,3 +1,5 @@
+@import "aos/dist/aos.css";
+
 // COLOR VARIABLES //
 $brand-primary: #5988ff;
 $on-brand-primary: #ffffff; // Farbe des Textes/Icons auf der Primärfarbe
@@ -33,7 +35,6 @@ html {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  // position: relative;
 }
 
 // CONTENT LIMITATION //
@@ -44,8 +45,6 @@ html {
 .content-wrapper {
   margin: 0 auto;
   max-width: 1920px;
-  // padding: 0 2rem;
-  overflow-x: hidden;
 }
 
 //FONTS//

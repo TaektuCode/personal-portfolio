@@ -29,6 +29,9 @@
         @if (projects.length > 0) { @for (project of projects; track project.id;
         let i = $index) {
         <app-project-view
+          [attr.data-aos]="i % 2 === 0 ? 'fade-left' : 'fade-right'"
+          data-aos-duration="600"
+          [attr.data-aos-delay]="100 + i * 50"
           [nameKey]="project.nameKey"
           [descriptionKey]="project.descriptionKey"
           [imageUrl]="project.imageUrl"
