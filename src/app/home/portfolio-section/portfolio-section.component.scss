@@ -90,7 +90,6 @@
 
   @media (min-width: 1200px) {
     padding: 15rem 4rem;
-    overflow: visible;
 
     &__bubble-element1 {
       position: absolute;
@@ -142,5 +141,8 @@
       grid-template-columns: 1fr;
       gap: 12.5rem;
     }
+  }
+  @media (min-width: 2100px) {
+    overflow: visible;
   }
 }
